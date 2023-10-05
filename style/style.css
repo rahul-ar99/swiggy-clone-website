@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    
+}
+section{
+    display: flex;
+    justify-content: center;
+
+}
+.wrapper{
+    width: 80%;
+}
+.top-section nav{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.top-section .left{
+    display: flex;
+    
+}
+.top-section .left img{
+    height: 50px;
+}
+.top-section .left button{
+    height: 50px;
+}
+
+.top-section .right{
+    display: flex;
+    height: 100%;
+}
+
+.top-section .right ul{
+    height: 100%;
+}
+
+.top-section .right li{
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+    height: 100%;
+}
+ 
+.top-section .right li a{
+    display: flex;
+    height: inherit;
+    align-items: center;
+    text-decoration: none;
+}
+.top-section .right li p{
+    padding-left: 10px;
+}
+.top-section .right input{
+    height: 50px;
+}
+.top-section .right .user{
+    height: 60px;
+    width: 60px;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+    border-radius: 50%;
+}
+.top-section .right .user i{
+    font-size: 40px;
+}
+
+
+.offers{
+    
+}
+.offers .head{
+    display: flex;
+    justify-content: space-between;
+    height: 29px;
+}
+.offers .head .right-btn{
+
+}
+.offers .head button{
+    height: 20px;
+}
+
+.offers ul{
+    width: 90%a;
+    display:flex;
+    /* flex-wrap:wrap; */
+    overflow: scroll;
+    height: 200px;
+
+    
+}
+.offers .head ul li{
+    /* width: 500px; */
+    display: flex;
+    height: min-content;
+    list-style:none;
+}
+.offers ul li img{
+    width: 300px;
+    
+}
+
+.offers .offer-ul{
+    column-gap: 10px;
+}
+.offers .offer-ul li{
+    list-style: none
+}
+
+
+.food-items{
+
+}
+.food-items .head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-items .head h4{
+    
+}
+.food-items .head ul{
+
+}
+.food-items .head ul li{
+    list-style: none;
+}
+.food-items .head ul li button{
+
+}
+
+.food-items ul{
+    display: flex;
+    overflow: scroll;
+    /* width: max-content; */
+}
+.food-items .image li{
+    list-style: none;
+    /* width: 100px; */
+}
+.food-items .image li img{
+    height: 190px;
+}
+
+.top-shops{
+
+}
+.top-shops .head{
+    display: flex;
+    justify-content: space-between;
+}
+.top-shops .head h4{
+
+}
+
+.top-shops .head ul{
+    display: flex;
+}
+.top-shops .head ul li{
+    list-style: none;
+}
+.top-shops .head ul li button{
+
+}
+.top-shops .head ul li button i{
+
+}
+
+.top-shops .top-shop{
+    /* overflow: scroll; */
+    
+}
+.top-shops .top-shop ul{
+    display: flex;
+    overflow: scroll;
+}
+.top-shops .top-shop ul li{
+    list-style: none;
+}
+.top-shops .top-shop ul li div{
+    width: 300px;
+    overflow: hidden;
+
+}
+.top-shops .top-shop ul li a img{
+    width: 100%;
+    height: 200px;
+    display: block;
+    
+}
