@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/style.css" />
+        <title>Cart</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- top-section -->
+        <section id="top-section">
+            <div class="wrapper">
+                <nav>
+                    <div class="left">
+                        <h1>
+                            <a href="#"
+                                ><img
+                                    src="images/swiggy-small-icon.png"
+                                    alt="swiggy icon"
+                            /></a>
+                        </h1>
+                        <p>SECURE CHECKOUT</p>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <p>Help</p>
+                            </li>
+
+                            <li onclick="signInFunction()">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <p>Sign In</p>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div id="blank"></div>
+        </section>
+        <!-- end top-section -->
+
+        <!-- main-center -->
+        <section id="main-center">
+            <div class="empty cart-button1">
+                <div>
+                    <img src="images/cart-empty.webp" alt="cooking image" />
+                </div>
+                <p class="p1">Your cart is empty</p>
+                <p class="p2">You can to home page to view more Restaurant</p>
+                <a href="index.html"
+                    ><button>SEE RESTAURANT NEAR YOU</button></a
+                >
+            </div>
+        </section>
+        <section id="cart-bottom">
+            <div class="wrapper">
+                <div class="left">
+                    <ul>
+                        <li class="cart-button1">
+                            <p class="p1">
+                                Oops, something went wrong. Please clear your
+                                cart and try again
+                            </p>
+                            <button>RETRY</button>
+                        </li>
+                        <li>
+                            <p class="p1">Account</p>
+                            <p class="p2">
+                                To place your order now, log in to your existing
+                                a account or sign up
+                            </p>
+                            <div>
+                                <button>
+                                    Hove an account?<br /><span>LOG IN</span>
+                                </button>
+                                <button class="active">
+                                    New to Swiggy?<br /><span>SIGN UP</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <p>Delivery address</p>
+                        </li>
+                        <li>
+                            <p>Payment</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <p class="p1">Cart Empty</p>
+                    <div>
+                        <img src="images/cart-empty.webp" alt="cooking image" />
+                    </div>
+                    <p class="p2">
+                        Good food is always cooking!<br />Go ahead, order some
+                        yummy<br />items from the menu.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script src="script/script.js"></script>
+</html>

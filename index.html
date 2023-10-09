@@ -1,376 +1,1169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="script/script.js"></script>
-</head>
-<body>
-    <section class="top-section">
-        <div class="wrapper">
-            <nav>
-                <div class="left">
-                    <h1><a href="#"><img src="images/swiggy-small-icon.png" alt="swiggy icon"></a></h1>
-                    <button>set your primices location</button>
-                </div>
-                <div class="right">
-                    <ul>
-                        <li>
-                            <a href="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/style.css" />
+        <title>Swiggy Clone</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <section id="top-section">
+            <div class="wrapper">
+                <nav>
+                    <div class="left">
+                        <h1>
+                            <a href="#"
+                                ><img
+                                    src="images/swiggy-small-icon.png"
+                                    alt="Swiggy icon"
+                            /></a>
+                        </h1>
+                        <button>set your primices location</button>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <p>Search</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="">
+                            </li>
+                            <li>
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <p>Offers</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="">
+                            </li>
+                            <li>
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <p>Help</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="">
+                            </li>
+                            <li onclick="signInFunction()">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <p>Sign In</p>
+                            </li>
+                            <li>
+                                <a href="cart.html"
+                                    ><i
+                                        class="fa fa-user"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <p>Cart</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div id="blank"></div>
+        </section>
+        <section id="offers">
+            <div class="wrapper">
+                <div class="head">
+                    <h4>Best offers for you</h4>
+                    <ul>
+                        <li>
+                            <button onclick="moveLeft()">
+                                <i class="material-icons">arrow_back</i>
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="moveRight()">
+                                <i class="material-icons">arrow_forward</i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="offer-ul" id="offer-ul">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/offers1.webp"
+                                    alt="Offer Image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/offers2.webp"
+                                    alt="Offer Image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/offers3.webp"
+                                    alt="Offer Image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/offers4.webp"
+                                    alt="Offer Image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/offers5.webp"
+                                    alt="Offer Image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/offers6.webp"
+                                    alt="Offer Image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/offers7.webp"
+                                    alt="Offer Image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/offers8.webp"
+                                    alt="Offer Image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="food-items">
+            <div class="wrapper">
+                <div class="head">
+                    <h4>What's on your mind?</h4>
+                    <ul class="buttons">
+                        <li>
+                            <button>
+                                <i class="material-icons">arrow_back</i>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <i class="material-icons">arrow_forward</i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="image">
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/Biryani_2.webp"
+                                    alt="Biryani image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/Chinese.webp"
+                                    alt="Chinese food"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/North_Indian_4.webp"
+                                    alt="North_Indian food"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Pizza.webp" alt="Pizza" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Burger.webp" alt="Burger" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Noodles.webp" alt="Noodles" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Momos.webp" alt="Momos" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Dosa.webp" alt="Dosa" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Cakes.webp" alt="Cakes" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Kebabs.webp" alt="Kebabs" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Rolls.webp" alt="Rolls" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/Pure_Veg.webp"
+                                    alt="Pure_Veg"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/Ice_Creams.webp"
+                                    alt="Ice_Creams"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Paratha.webp" alt="Paratha" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/Rasgulla.webp"
+                                    alt="Rasgulla"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/Desserts_2.webp"
+                                    alt="Desserts_2"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Pasta.webp" alt="Pasta" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/Pav_Bhaji.webp"
+                                    alt="Pav_Bhaji"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img
+                                    src="images/Chole_Bature.webp"
+                                    alt="Chole_Bature"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div>
+                                <img src="images/Pastry.webp" alt="Pastry" />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="wrapper">
+                <hr />
+            </div>
+        </section>
+        <section id="top-shops">
+            <div class="wrapper">
+                <div class="head">
+                    <h4>Top Restorants in kannur</h4>
+                    <ul>
+                        <li>
+                            <button>
+                                <i class="material-icons">arrow_back</i>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <i class="material-icons">arrow_forward</i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-shop">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food1.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food2.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food3.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food4.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food5.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food6.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food7.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food8.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food9.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food10.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food11.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food12.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food13.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food14.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food15.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food16.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food17.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food18.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <p class="rating">
+                                    <i class="fa fa-user"></i>4.3
+                                </p>
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food19.webp"
+                                        alt="Food image"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span><i class="fa fa-user"></i>4.3</span>
+                                <p>North Indian, South Indian Burrabazar</p>
                             </a>
                         </li>
                     </ul>
                 </div>
-            </nav>
-        </div>
-    </section>
-
-    <section class="offers">
-        <div class="wrapper">
-            <div class="head">
-                <h4>Best offers for you</h4>
-                <ul >
-                    <li>
-                        <button><i class="fa fa-user"></i></button>
-                    </li>
-                    <li>
-
-                        <button><i class="fa fa-user"></i></button>
-                    </li>
-                </ul>
             </div>
-            <ul class="offer-ul">
-                <li>
-                    <a href="#"><img src="images/offers1.webp" alt="Offer Image"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/offers2.webp" alt="Offer Image"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/offers3.webp" alt="Offer Image"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/offers4.webp" alt="Offer Image"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/offers5.webp" alt="Offer Image"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/offers6.webp" alt="Offer Image"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/offers7.webp" alt="Offer Image"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/offers8.webp" alt="Offer Image"></a>
-                </li>
-            </ul>
-            </div>
-        </div>
-    </section>
-    <section class="food-items">
-        <div class="wrapper">
-            <div class="head">
-                <h4>What's on your mind?</h4>
-                <ul class="buttons">
-                    <li>
-                        <button><i class="fa fa-user"></i></button>
-                    </li>
-                    <li>
-    
-                        <button><i class="fa fa-user"></i></button>
-                    </li>
-                </ul>
-            </div>
-            <ul class="image">
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Biryani_2.webp" alt="Biryani image">
-                        </div>
+        </section>
 
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Chinese.webp" alt="Chinese food">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/North_Indian_4.webp" alt="North_Indian food">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Pizza.webp" alt="Pizza">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Burger.webp" alt="Burger">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Noodles.webp" alt="Noodles">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Momos.webp" alt="Momos">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Dosa.webp" alt="Dosa">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Cakes.webp" alt="Cakes">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Kebabs.webp" alt="Kebabs">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Rolls.webp" alt="Rolls">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Pure_Veg.webp" alt="Pure_Veg">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Ice_Creams.webp" alt="Ice_Creams">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Paratha.webp" alt="Paratha">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Rasgulla.webp" alt="Rasgulla">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Desserts_2.webp" alt="Desserts_2">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Pasta.webp" alt="Pasta">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Pav_Bhaji.webp" alt="Pav_Bhaji">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Chole_Bature.webp" alt="Chole_Bature">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div>
-                            <img src="images/Pastry.webp" alt="Pastry">
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="top-shops">
-        <div class="wrapper">
-            <div class="head">
-                <h4>Top Restorants in kannur</h4>
+        <section>
+            <div class="wrapper">
+                <hr />
+            </div>
+        </section>
+
+        <section id="main-content">
+            <div class="wrapper">
+                <div class="head">
+                    <h4>Restaurants with online food delivery in Kolkata</h4>
+                </div>
+                <div class="sort-items">
+                    <ul>
+                        <li>
+                            <button>
+                                filter<i class="material-icons">arrow_back</i>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Sort By<i class="material-icons">arrow_back</i>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Fast Delivery<i class="material-icons"
+                                    >arrow_back</i
+                                >
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                New on Swiggy<i class="material-icons"
+                                    >arrow_back</i
+                                >
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Rating 4.0+<i class="material-icons"
+                                    >arrow_back</i
+                                >
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Pure Veg<i class="material-icons">arrow_back</i>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Offers<i class="material-icons">arrow_back</i>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Rs 300-Rs 600<i class="material-icons"
+                                    >arrow_back</i
+                                >
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                Less than Rs. 300<i class="material-icons"
+                                    >arrow_back</i
+                                >
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="foods">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="images/food1.webp" alt="Pastry" />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="images/food2.webp" alt="Pastry" />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="images/food3.webp" alt="Pastry" />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="images/food4.webp" alt="Pastry" />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="images/food5.webp" alt="Pastry" />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="images/food6.webp" alt="Pastry" />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="images/food7.webp" alt="Pastry" />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="images/food8.webp" alt="Pastry" />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="images/food9.webp" alt="Pastry" />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food10.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food11.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food12.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food13.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food14.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food15.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food16.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food17.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food18.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food19.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img
+                                        src="images/food19.webp"
+                                        alt="Pastry"
+                                    />
+                                </div>
+                                <h6>Domino's Pizza</h6>
+                                <span class="rating"
+                                    ><i class="fa fa-user"></i>4.3</span
+                                >
+                                <p>North Indian, South Indian Burrabazar</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="bottom-part">
+            <div class="wrapper">
+                <div class="Best-places">
+                    <h6>Best Places to Eat Across Cities</h6>
+                    <ul>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                        <li>
+                            <a href="#">Best Restaurants in kerala</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="culslnes">
+                    <h6>Best Culslnes Near Me</h6>
+                    <ul>
+                        <li>
+                            <a href="#">Chinese Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">South Indian Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">Indian Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">Kerala Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">Korean Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">North Indian Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">Seafood Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">Bengali Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">Punjabi Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">italian Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">andhra Restaurant Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#">Punjabi Restaurant Near Me</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="every-shops">
+                    <h6>Explore Every Restaurants Near Me</h6>
+                    <ul>
+                        <li>
+                            <a href="#">Explore Restaurants Near Me</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                >Explore Top Rated Restaurants Near Me</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="apps">
+            <h5>For better experience, download<br />the Swiggy app now</h5>
+            <a href="#"
+                ><img src="images/playstore.png" alt="download from playstore"
+            /></a>
+            <a href="#"
+                ><img src="images/appstore.png" alt="download from appstore"
+            /></a>
+        </section>
+        <footer>
+            <div class="logo">
+                <h5>swiggy</h5>
+                <p>2023 Bundl Technologies Pvt. Ltd</p>
+            </div>
+            <div class="company">
+                <h6>Company</h6>
                 <ul>
-                    <li>
-                        <button><i class="fa fa-user" aria-hidden="true"></i></button>
-                    </li>
-                    <li>
-                        <button><i class="fa fa-user" aria-hidden="true"></i></button>
-                    </li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Swiggy One</a></li>
+                    <li><a href="#">Swiggy Instamart</a></li>
+                    <li><a href="#">Swiggy Genie</a></li>
                 </ul>
             </div>
-            <div class="top-shop">
+            <div class="contact">
+                <h6>contact us</h6>
                 <ul>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food1.webp" alt="Pastry"></a>
-                            <h6>Domino's Pizza</h6>
-                            <p class="rating"><i class="fa fa-user"></i>4.3</p>
-                            <p>North Indian, South Indian
-                                Burrabazar</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food2.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food3.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food4.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food5.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food6.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food7.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food8.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food9.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food10.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food11.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food12.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food13.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food14.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#"><img src="images/food15.webp" alt="Pastry"></a>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food16.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food17.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food18.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <a href="#"><img src="images/food19.webp" alt="Pastry"></a>
-                        </div>
-                    </li>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Partner with us</a></li>
+                    <li><a href="#">Ride with me</a></li>
+                </ul>
+                <h6>Legal</h6>
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
-        </div>
-    </section>
-</body>
+            <div class="deliver">
+                <h6>We deliver to:</h6>
+                <ul>
+                    <li><a href="#">Bangalore</a></li>
+                    <li><a href="#">Gurgaon</a></li>
+                    <li><a href="#">Hyderabad</a></li>
+                    <li><a href="#">Delhi</a></li>
+                    <li><a href="#">Mumbai</a></li>
+                    <li><a href="#">Pune</a></li>
+                    <button>589 cities</button>
+                </ul>
+            </div>
+        </footer>
+    </body>
+    <script type="text/javascript" src="script/script.js"></script>
 </html>
