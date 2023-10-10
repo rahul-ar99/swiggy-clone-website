@@ -16,6 +16,8 @@
     </head>
 
     <body>
+        <!--  ------------------------ top-section -------------------------------- -->
+
         <section id="top-section">
             <div class="wrapper">
                 <nav>
@@ -27,30 +29,37 @@
                                     alt="Swiggy icon"
                             /></a>
                         </h1>
-                        <button>set your primices location</button>
+                        <div class="location">
+                            <p>Other</p>
+                            <span>Kolkata, West Bengal, India</span>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
                     </div>
                     <div class="right">
                         <ul>
                             <li>
-                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <i class="fa fa-search" aria-hidden="true"></i>
                                 <p>Search</p>
                             </li>
-                            <li>
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <p>Offers</p>
+                            <li id="offer-new">
+                                <i class="fa fa-empire" aria-hidden="true"></i>
+                                <p>Offers <span>new</span></p>
                             </li>
                             <li>
-                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <i
+                                    class="fa fa-life-buoy"
+                                    aria-hidden="true"
+                                ></i>
                                 <p>Help</p>
                             </li>
                             <li onclick="signInFunction()">
-                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
                                 <p>Sign In</p>
                             </li>
                             <li>
                                 <a href="cart.html"
                                     ><i
-                                        class="fa fa-user"
+                                        class="fa fa-shopping-bag"
                                         aria-hidden="true"
                                     ></i>
                                     <p>Cart</p>
@@ -62,6 +71,9 @@
             </div>
             <div id="blank"></div>
         </section>
+        <!--  ------------------------ top-section -------------------------------- -->
+
+        <!--  ------------------------ offers -------------------------------- -->
         <section id="offers">
             <div class="wrapper">
                 <div class="head">
@@ -163,6 +175,11 @@
                 </ul>
             </div>
         </section>
+
+        <!--  ------------------------ end of offers -------------------------------- -->
+
+        <!--  ------------------------ food-items -------------------------------- -->
+
         <section id="food-items">
             <div class="wrapper">
                 <div class="head">
@@ -351,11 +368,21 @@
                 </ul>
             </div>
         </section>
+
+        <!--  ------------------------ end food-items -------------------------------- -->
+
+        <!--  ------------------------ only for hr tag -------------------------------- -->
+
         <section>
             <div class="wrapper">
                 <hr />
             </div>
         </section>
+
+        <!--  ------------------------ end of only for hr tag -------------------------------- -->
+
+        <!--  ------------------------ top-shops -------------------------------- -->
+
         <section id="top-shops">
             <div class="wrapper">
                 <div class="head">
@@ -662,12 +689,17 @@
                 </div>
             </div>
         </section>
+        <!--  ------------------------ end of  top-shops -------------------------------- -->
+
+        <!--  ------------------------ only for hr tag -------------------------------- -->
 
         <section>
-            <div class="wrapper">
-                <hr />
-            </div>
+            <div class="wrapper"><hr /></div>
         </section>
+
+        <!--  ------------------------ end of only for hr tag -------------------------------- -->
+
+        <!--  ------------------------ main-content -------------------------------- -->
 
         <section id="main-content">
             <div class="wrapper">
@@ -1013,6 +1045,11 @@
                 </div>
             </div>
         </section>
+
+        <!--  ------------------------ end main-content -------------------------------- -->
+
+        <!--  ------------------------ bottom-part -------------------------------- -->
+
         <section id="bottom-part">
             <div class="wrapper">
                 <div class="Best-places">
@@ -1112,6 +1149,11 @@
                 </div>
             </div>
         </section>
+
+        <!--  ------------------------ end of bottom-part -------------------------------- -->
+
+        <!--  ------------------------ apps -------------------------------- -->
+
         <section id="apps">
             <h5>For better experience, download<br />the Swiggy app now</h5>
             <a href="#"
@@ -1121,6 +1163,11 @@
                 ><img src="images/appstore.png" alt="download from appstore"
             /></a>
         </section>
+
+        <!--  ------------------------ end apps -------------------------------- -->
+
+        <!--  ------------------------ footer -------------------------------- -->
+
         <footer>
             <div class="logo">
                 <h5>swiggy</h5>
@@ -1164,6 +1211,7 @@
                 </ul>
             </div>
         </footer>
+        <!--  ------------------------ end of footer -------------------------------- -->
     </body>
     <script type="text/javascript" src="script/script.js"></script>
 </html>

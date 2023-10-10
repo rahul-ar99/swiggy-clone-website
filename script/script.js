@@ -74,17 +74,26 @@ function blankHide(){
 }
 
 
-
+offerScroll = 3000
 function moveRight(){
     const offer_ul = document.getElementById("offer-ul")
     offer_ul.scrollLeft +=400
     // offer_ul.scrollRight += 10
+    offerScroll+=200
+    offer_ul.scrollTo({
+        top:0,
+        left:offerScroll,
+        behavior:'smooth'
+    })
 }
 function moveLeft(){
     const offer_ul = document.getElementById("offer-ul")
     console.log
     offer_ul.scrollLeft -=400
+    offerScroll -= 500
     offer_ul.scrollTo({
+        top:0,
+        left:offerScroll,
         behavior:'smooth'
     })
     // offer_ul.scrollRight += 10

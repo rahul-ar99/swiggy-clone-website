@@ -5,6 +5,8 @@
 
 body{
     position: relative;
+    font-family:sans-serif;
+
 }
 section{
     display: flex;
@@ -22,9 +24,15 @@ a{
     color: #000000;
 }
 #top-section{
-    border-bottom: 1px solid black;
+
+    width: 100%;
+    box-shadow: 0px 1px 25px -20px #111;
+    background-color: #fff;
+    position: fixed;
+
 }
 #top-section nav{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -32,14 +40,37 @@ a{
     padding:0px 100px;
     margin-left: 40px;
 
+
 }
 
 #top-section .left{
     display: flex;
     align-items: center;
     gap: 50px;
-    
+    width: fit-content;
 }
+#top-section .left .location{
+    display: flex;
+    align-items: center;
+
+}
+#top-section .left .location p{
+    font-size: 13px;
+    margin-right: 4px;
+    border-bottom: 2px solid #424242;
+    color: #424242;
+    font-weight: 600;
+}
+#top-section .left .location span{
+    font-size: 12px;
+    border-bottom:none;
+    color: #7a7a7a;
+}
+#top-section .left .location i{
+    margin-left: 4px;
+    color: #fc8019;
+}
+
 #top-section .left img{
     height: 50px;
 }
@@ -50,10 +81,10 @@ a{
 #top-section .right{
     display: flex;
     height: 100%;
+    width: 800px;
 }
 
 #top-section .right ul{
-    height: 100%;
     display: flex;
     gap: 30px;
     align-items: center;
@@ -71,8 +102,21 @@ a{
     height: 100%;
     color: #424242;
 }
+#top-section .right li img{
+    width: 18px;
+}
 #top-section .right li:hover,#top-section .right li a:hover{
     color: #fc8019;
+}
+#top-section .right #offer-new{
+    position: relative;
+}
+#top-section .right #offer-new span{
+    position: absolute;
+    top: 33%;
+    font-size: 10px;
+    color: #fc8019;
+
 }
 
 #top-section .right li a{
@@ -224,7 +268,7 @@ a{
 
 
 #offers{
-    padding-top:30px ;
+    padding-top:130px ;
 }
 #offers .head{
     display: flex;
@@ -721,6 +765,7 @@ footer ul li a{
 #cart-bottom .right div img{
     width: 100%;
     margin-bottom: 20px;
+    filter: grayscale(100%);
 }
 #cart-bottom .right .p1{
     font-size: 30px;
