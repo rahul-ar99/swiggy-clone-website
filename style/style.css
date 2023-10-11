@@ -22,6 +22,7 @@ width: 76%;
 a{
     text-decoration: none;
     color: #000000;
+    cursor: pointer;
 }
 #top-section{
 
@@ -29,6 +30,7 @@ a{
     box-shadow: 0px 1px 25px -20px #111;
     background-color: #fff;
     position: fixed;
+    z-index: 1;
 
 }
 #top-section nav{
@@ -177,10 +179,10 @@ a{
     /* float: right; */
 
 }
-#blank .signin .content{
+#blank .content{
     width: 360px;
 }
-#blank .signin .content button{
+#blank .content button{
     padding: 0;
     margin: 0;
     font-size: 0;
@@ -188,34 +190,35 @@ a{
     border: none;
 
 }
-#blank .signin .content button i{
+#blank .content button i{
     font-size: 30px;
     padding: 0;
     margin: 0;
 }
-#blank .signin .content .head{
+#blank .content .head{
     /* border-bottom: 6px solid pink; */
     /* width: 10; */
     margin-bottom: 42px;
     position: relative;
+    display: block;
 }
-#blank .signin .content .head h5{
+#blank .content .head h5{
     font-size: 30px;
     line-height: 65px;
     font-weight: 500;
 
 }
-#blank .signin .content .head p{
+#blank .content .head p{
     font-size: 12px;
     /* margin-bottom: 12px; */
 }
-#blank .signin .content .head img{
+#blank .content .head img{
     position: absolute;
     right: 0;
     top: 0;
     width: 105px;
 }
-#blank .signin .content .head p:after{
+#blank .content .head p:after{
     content:'';
     margin-top: 16px;
     height: 2px;
@@ -224,14 +227,14 @@ a{
     display: block;
     /* transition */
 }
-#blank .signin .content .head p span{
+#blank .content .head p span{
     color: #fc8019;
     cursor: pointer;
 }
-#blank .signin .content .inpField{
+#blank .content .inpField{
     width: 100%;
 }
-#blank .signin .content .inpField input{
+#blank .content .inpField input{
     width: 94%;
     height: 67px;
     -moz-appearance: textfield;
@@ -241,7 +244,7 @@ a{
     outline: none;
 }
 
-#blank .signin .content .inpField #referal{
+#blank .content .inpField #referal{
     text-decoration: none;
     color: #5d8ed5;
     margin-top: 30px;
@@ -250,7 +253,7 @@ a{
 }
 
 
-#blank .signin .content .inpField button{
+#blank .content .inpField button{
     margin-top: 20px;
     width: 100%;
     height: 50px;
@@ -260,7 +263,7 @@ a{
     font-weight: 600;
 
 }
-#blank .signin .content .inpField p{
+#blank .content .inpField p{
     padding-top: 5px;
     font-size: 10.5px;
 }
@@ -270,9 +273,11 @@ a{
 #offers{
     padding-top:130px ;
 }
-#offers .head{
+.head{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px 20px 0px;
 }
 #offers .head ul{
     display: flex;
@@ -312,6 +317,9 @@ a{
 }
 .head button{
     border-radius: 40px;
+    border: none;
+    background-color: #e1e1e1;
+    margin-left: 10px;
 }
 #offers .offer-ul li div{
     width: 415px;
@@ -339,7 +347,6 @@ a{
 #food-items .head{
     display: flex;
     justify-content: space-between;
-    padding: 30px 0px 20px 0px;
 }
 
 #food-items .head h4{
@@ -351,6 +358,7 @@ a{
 #food-items .head ul li{
     list-style: none;
     display: flex  ;
+    gap: 10px;
 }
 #food-items .head ul li button{
 
@@ -469,13 +477,16 @@ hr{
 }
 #main-content  .sort-items ul li{
     list-style: none;
-    row-gap: 50px;
+    row-gap: 50px;;
 }
 #main-content  .sort-items ul li button{
     background-color: #fff;
     border: 1px solid #808080;
     border-radius: 14px;
     padding: 7px;
+
+    display: flex;
+    align-items: center
 }
 #main-content  .sort-items ul li button i{
     font-size: 15px;
@@ -504,6 +515,7 @@ hr{
 }
 #main-content .foods ul li{
     width: 24%;
+    
 }
 
 #main-content .foods ul li a{
@@ -516,17 +528,32 @@ hr{
     overflow: hidden;
     border-radius: 14px;
 }
-#main-content .foods  a img{
+#main-content .foods .food-details{
+    padding-left: 20px;
+    width: 90%;
+    height: min-content;
+}
+
+#main-content .foods  a .food-img img{
     width: 100%;
 
 }
 #main-content .foods ul li a h6{
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 10px;
 }
-#main-content .foods ul li a span{
-
+#main-content .foods ul li a .food-details span{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
 }
-#main-content .foods ul li a p{
+#main-content .foods ul li a .food-details  p{
+    color: #424242;
+    font-size: 14px;
+    line-height: 20px;
+}   
+#main-content .foods ul li a .food-details img{
+    height: 20px;
 
 }
 
@@ -653,7 +680,7 @@ footer ul li a{
 
 #main-center{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -704,7 +731,7 @@ footer ul li a{
     width: 65%;
     gap: 40px;
     display: flex;
-    height: 79.5vh;
+    /* height: 79.5vh; */
 }
 
 #cart-bottom .left{

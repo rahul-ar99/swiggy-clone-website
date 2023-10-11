@@ -17,10 +17,8 @@
 
     <body>
         <!--  ------------------------ top-section -------------------------------- -->
-
         <section id="top-section">
             <div class="wrapper">
-                <nav>
                     <div class="left">
                         <h1>
                             <a href="#"
@@ -80,18 +78,18 @@
                     <h4>Best offers for you</h4>
                     <ul>
                         <li>
-                            <button onclick="moveLeft()">
+                            <button id="leftButton" onclick="rightBtn(offerul)">
                                 <i class="material-icons">arrow_back</i>
                             </button>
                         </li>
                         <li>
-                            <button onclick="moveRight()">
+                            <button id="rightButton" onclick="leftBtn(offerul)">
                                 <i class="material-icons">arrow_forward</i>
                             </button>
                         </li>
                     </ul>
                 </div>
-                <ul class="offer-ul" id="offer-ul">
+                <ul class="offer-ul" id="offerul">
                     <li>
                         <a href="#">
                             <div>
@@ -389,7 +387,7 @@
                     <h4>Top Restorants in kannur</h4>
                     <ul>
                         <li>
-                            <button>
+                            <button onclick="rightBtn()">
                                 <i class="material-icons">arrow_back</i>
                             </button>
                         </li>
@@ -404,17 +402,19 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <div>
+                                <div class="topShopImg">
                                     <img
                                         src="images/food1.webp"
                                         alt="Food image"
                                     />
                                 </div>
-                                <h6>Domino's Pizza</h6>
-                                <p class="rating">
-                                    <i class="fa fa-user"></i>4.3
-                                </p>
-                                <p>North Indian, South Indian Burrabazar</p>
+                                <div>
+                                    <h6>Domino's Pizza</h6>
+                                    <p class="rating">
+                                        <i class="fa fa-user"></i>4.3
+                                    </p>
+                                    <p>North Indian, South Indian Burrabazar</p>
+                                </div>
                             </a>
                         </li>
                         <li>
@@ -770,14 +770,20 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <div>
+                                <div class="food-img">
                                     <img src="images/food1.webp" alt="Pastry" />
                                 </div>
-                                <h6>Domino's Pizza</h6>
-                                <span class="rating"
-                                    ><i class="fa fa-user"></i>4.3</span
-                                >
-                                <p>North Indian, South Indian Burrabazar</p>
+                                <div class="food-details">
+                                    <h6>Domino's Pizza</h6>
+                                    <span class="rating">
+                                        <img
+                                            src="images/icons/star-inside-circle(1).png"
+                                            alt="star icon"
+                                        />4.3</span
+                                    >
+                                    <p>North Indian, Indian Burrabazar</p>
+                                    <p>Kolkata</p>
+                                </div>
                             </a>
                         </li>
                         <li>

@@ -21,7 +21,7 @@
                 <nav>
                     <div class="left">
                         <h1>
-                            <a href="#"
+                            <a href="index.html"
                                 ><img
                                     src="images/swiggy-small-icon.png"
                                     alt="swiggy icon"
@@ -73,19 +73,20 @@
                             <button>RETRY</button>
                         </li>
                         <li>
-                            <p class="p1">Account</p>
+                            <p class="p1" id="referal">Account</p>
                             <p class="p2">
                                 To place your order now, log in to your existing
                                 a account or sign up
                             </p>
-                            <div>
-                                <button>
+                            <div id="accountBtn">
+                                <button onclick="cartLogin()">
                                     Hove an account?<br /><span>LOG IN</span>
                                 </button>
-                                <button class="active">
+                                <button class="active" onclick="cartSignin()">
                                     New to Swiggy?<br /><span>SIGN UP</span>
                                 </button>
                             </div>
+                            <div id="blank"></div>
                         </li>
                         <li>
                             <p>Delivery address</p>

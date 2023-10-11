@@ -7,32 +7,101 @@ function signInFunction(){
     const b = setTimeout(blankHide,5);
 }
 
+function cartSignin(){
+    // const blank = document.getElementById("blank")
+    document.getElementById("accountBtn").style.display = "none"
+    document.getElementById("cartContent").innerHTML = cartSign
+}
+function cartLogin(){
+    document.getElementById("accountBtn").style.display = "none"
+    document.getElementById("cartContent").innerHTML = cartLog
+
+}
+
 function loginClose(){
     document.getElementById("left-blank").style.width = "100vw"
     const a = setTimeout(asdf,500)
     function asdf(){
         blank.style.display = "none";
+        document.getElementsByTagName("body")[0].style.overflow = "scroll"
     }
     loginFlag = true
 }
-const loginContent = `<div class="left-blank"  id="left-blank" onclick="loginClose()"></div>
-<div class="signin" id="signin">
-<div class="content">
-    <button onclick="loginClose()"><i class="fa fa-close"></i></button>
-    <div class="head">
-        <h5>Login</h5>
-        <p>or <span onclick="signInAndLogIn()">create an account</span></p>
-        <img src="images/login.webp" alt="flower image">
-    </div>
-    <div class="inpField">
-        <input type="number" placeholder="Phone number" />
-        <button>LOGIN</button>
-        <P>By clicking on Login, I Accept the Terms & Aconditions & Privacy Policy</P>
-    </div>
+
+const cartLog = `<div class="head">
+<h5>Login</h5>
+<p>
+    or
+    <span onclick="cartSignin()"
+        >create an account</span
+    >
+</p>
+<img
+    src="images/login.webp"
+    alt="flower image"
+/>
 </div>
+<div class="inpField">
+<input
+    type="number"
+    placeholder="Phone number"
+/>
+<button>LOGIN</button>
+<p>
+    By clicking on Login, I Accept the
+    Terms & conditions & Privacy Policy
+</p>
+</div>`
+const cartSign = `<div class="head">
+<h5>Sign up</h5>
+<p>
+    or
+    <span onclick="cartLogin()"
+        >login to your account</span
+    >
+</p>
+<img
+    src="images/login.webp"
+    alt="flower image"
+/>
+</div>
+<div class="inpField"  id="inpField">
+<input
+    type="number"
+    placeholder="Phone number"
+/>
+<input type="text" placeholder="Name" />
+<input
+    type="email"
+    placeholder="Email"
+    requied
+/>
+<a onclick="referalFun()"><p id="referal">Have a referal code?</p></a>
+<button>SIGN UP</button>
+<p>
+    By clicking on Login, I Accept the
+    Terms & conditions & Privacy Policy
+</p>
 </div>`
 
-const signupContent = `<div class="left-blank"  id="left-blank" onclick="loginClose()"></div>
+const loginContent = `<div class="left-blank"  id="left-blank" onclick="loginClose()"></div>
+<div class="signin" id="signin">
+    <div class="content">
+        <button onclick="loginClose()"><i class="fa fa-close"></i></button>
+        <div class="head">
+            <h5>Login</h5>
+            <p>or <span onclick="signInAndLogIn()">create an account</span></p>
+            <img src="images/login.webp" alt="flower image">
+        </div>
+        <div class="inpField">
+            <input type="number" placeholder="Phone number" max="10" required/>
+            <button>LOGIN</button>
+            <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
+        </div>
+    </div>
+</div>`
+
+var signupContent = `<div class="left-blank"  id="left-blank" onclick="loginClose()"></div>
 <div class="signin" id="signin">
 <div class="content">
     <button onclick="loginClose()"><i class="fa fa-close"></i></button>
@@ -41,18 +110,31 @@ const signupContent = `<div class="left-blank"  id="left-blank" onclick="loginCl
         <p>or <span onclick="signInAndLogIn()">login to your account</span></p>
         <img src="images/login.webp" alt="flower image">
     </div>
-    <div class="inpField">
+    <div class="inpField" id="inpField">
         <input type="number" placeholder="Phone number"/>
         <input type="text" placeholder="Name"/>
         <input type="email" placeholder="Email" requied/>
-        <p id="referal">Have a referal code?</p>
+        <a href="#" id="referal" onclick="referalFun()"><p id="referal">Have a referal code?</p></a>
         <button>SIGN UP</button>
-        <P>By clicking on Login, I Accept the Terms & Aconditions & Privacy Policy</P>
+        <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
     </div>
 </div>
 </div>`
+
+const referCode = `<input type="number" placeholder="Phone number"/>
+<input type="text" placeholder="Name"/>
+<input type="email" placeholder="Email" requied/>
+<input type="text" placeholder="Referal Code" requied/>
+<button>SIGN UP</button>
+<P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>`
+// document.getElementById("referal").addEventListener("click",b)
+function referalFun(){
+    document.getElementById("inpField").innerHTML = referCode;
+    signupContent = referCode
+
+}
 var moveBlank = true;
-var loginFlag = true
+var loginFlag = true;
 function signInAndLogIn(){
     if(loginFlag == true){
         document.getElementById("blank").innerHTML = signupContent
@@ -97,4 +179,28 @@ function moveLeft(){
         behavior:'smooth'
     })
     // offer_ul.scrollRight += 10
+}
+function rightBtn(idName){
+    var container = document.getElementById(idName);
+    sideScroll(container,'right',4,600,10);
+}
+function leftBtn(idName){
+    var container = document.getElementById(idName);
+    sideScroll(container,'left',4,600,10);
+}
+
+
+function sideScroll(element, direction,speed, distance,  step){
+    scrollAmount =0;
+    var slideTimer = setInterval(function(){
+        if(direction == "left"){
+            element.scrollLeft -= step;
+        }else{
+            element.scrollLeft += step;
+        }
+        scrollAmount += step;
+        if(scrollAmount>=distance){
+            window.clearInterval(slideTimer);
+        }
+    },speed)
 }
