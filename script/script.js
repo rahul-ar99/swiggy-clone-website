@@ -6,7 +6,6 @@ function signInFunction(){
     document.getElementsByTagName("body")[0].style.overflow = "hidden"
     const b = setTimeout(blankHide,5);
 }
-
 function cartSignin(){
     // const blank = document.getElementById("blank")
     document.getElementById("accountBtn").style.display = "none"
@@ -15,9 +14,7 @@ function cartSignin(){
 function cartLogin(){
     document.getElementById("accountBtn").style.display = "none"
     document.getElementById("cartContent").innerHTML = cartLog
-
 }
-
 function loginClose(){
     document.getElementById("left-blank").style.width = "100vw"
     const a = setTimeout(asdf,500)
@@ -43,8 +40,12 @@ const cartLog = `<div class="head">
 </div>
 <div class="inpField">
 <input
-    type="number"
+    type="text"
+    inputmode="numeric"
     placeholder="Phone number"
+    oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    maxlength = "10"
+    required
 />
 <button>LOGIN</button>
 <p>
@@ -67,10 +68,19 @@ const cartSign = `<div class="head">
 </div>
 <div class="inpField"  id="inpField">
 <input
-    type="number"
-    placeholder="Phone number"
+type="text"
+inputmode="numeric"
+placeholder="Phone number"
+oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+maxlength = "10"
+required
 />
-<input type="text" placeholder="Name" />
+<input 
+type="text"
+placeholder="Name"
+maxlength="20"
+oninput="this.value = this.value.replace(/[^a-z]/g, '')"
+required />
 <input
     type="email"
     placeholder="Email"
@@ -130,7 +140,7 @@ const referCode = `<input type="number" placeholder="Phone number"/>
 // document.getElementById("referal").addEventListener("click",b)
 function referalFun(){
     document.getElementById("inpField").innerHTML = referCode;
-    signupContent = referCode
+    // signupContent = referCode
 
 }
 var moveBlank = true;
@@ -148,7 +158,6 @@ function signInAndLogIn(){
         const b = setTimeout(blankHide,10);
         moveBlank = false
     }
-
     // document.getElementById("left-blank").style.width = "62.5vw"
 }
 function blankHide(){
