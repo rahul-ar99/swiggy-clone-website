@@ -172,7 +172,7 @@ a{
     position: fixed;
     left: 0;
     /* display: flex; */
-    display: none;
+    display: flex;
     /* transition:width 2s; */
 }
 #top-section #blank:hover{    

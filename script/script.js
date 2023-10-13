@@ -67,6 +67,7 @@ const cartSign = `<div class="head">
 />
 </div>
 <div class="inpField"  id="inpField">
+<form>
 <input
 type="text"
 inputmode="numeric"
@@ -88,6 +89,7 @@ required />
 />
 <a onclick="referalFun()"><p id="referal">Have a referal code?</p></a>
 <button>SIGN UP</button>
+</form>
 <p>
     By clicking on Login, I Accept the
     Terms & conditions & Privacy Policy
@@ -104,8 +106,10 @@ const loginContent = `<div class="left-blank"  id="left-blank" onclick="loginClo
             <img src="images/login.webp" alt="flower image">
         </div>
         <div class="inpField">
+        <form>
             <input type="number" placeholder="Phone number" max="10" required/>
             <button>LOGIN</button>
+            </form>
             <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
         </div>
     </div>
@@ -121,22 +125,27 @@ var signupContent = `<div class="left-blank"  id="left-blank" onclick="loginClos
         <img src="images/login.webp" alt="flower image">
     </div>
     <div class="inpField" id="inpField">
+    <form>
         <input type="number" placeholder="Phone number"/>
         <input type="text" placeholder="Name"/>
         <input type="email" placeholder="Email" requied/>
         <a href="#" id="referal" onclick="referalFun()"><p id="referal">Have a referal code?</p></a>
         <button>SIGN UP</button>
+    </form>
         <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
     </div>
 </div>
-</div>`
+</div>
+</form>`
 
-const referCode = `<input type="number" placeholder="Phone number"/>
+const referCode = `<form>
+<input type="number" placeholder="Phone number"/>
 <input type="text" placeholder="Name"/>
 <input type="email" placeholder="Email" requied/>
 <input type="text" placeholder="Referal Code" requied/>
 <button>SIGN UP</button>
-<P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>`
+<P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
+</form>`
 // document.getElementById("referal").addEventListener("click",b)
 function referalFun(){
     document.getElementById("inpField").innerHTML = referCode;
