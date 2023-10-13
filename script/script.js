@@ -24,7 +24,6 @@ function loginClose(){
     }
     loginFlag = true
 }
-
 const cartLog = `<div class="head">
 <h5>Login</h5>
 <p>
@@ -198,12 +197,12 @@ function moveLeft(){
     })
     // offer_ul.scrollRight += 10
 }
-function rightBtn(idName){
-    var container = document.getElementById(idName);
+function rightBtn(offerul){
+    var container = document.getElementById(offerul);
     sideScroll(container,'right',4,600,10);
 }
-function leftBtn(idName){
-    var container = document.getElementById(idName);
+function leftBtn(offerul){
+    var container = document.getElementById(offerul);
     sideScroll(container,'left',4,600,10);
 }
 

@@ -167,13 +167,9 @@ a{
 }
 
 #top-section #blank{
-    /* width: 137.5vw; */
-    /* height: 100vh; */
     position: fixed;
     left: 0;
-    /* display: flex; */
-    display: flex;
-    /* transition:width 2s; */
+    display: none;
 }
 #top-section #blank:hover{    
     
