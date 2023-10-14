@@ -97,12 +97,12 @@
                     <h4>Best offers for you</h4>
                     <ul>
                         <li>
-                            <button id="leftButton" onclick="rightBtn()">
+                            <button id="leftButton" class="" onclick="rightBtn('offerul')">
                                 <i class="material-icons">arrow_back</i>
                             </button>
                         </li>
                         <li>
-                            <button id="rightButton" onclick="leftBtn()">
+                            <button id="rightButton" onclick="leftBtn('offerul')">
                                 <i class="material-icons">arrow_forward</i>
                             </button>
                         </li>
@@ -203,18 +203,18 @@
                     <h4>What's on your mind?</h4>
                     <ul class="buttons">
                         <li>
-                            <button>
+                            <button onclick="rightBtn('imageul')">
                                 <i class="material-icons">arrow_back</i>
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onclick="leftBtn('imageul')">
                                 <i class="material-icons">arrow_forward</i>
                             </button>
                         </li>
                     </ul>
                 </div>
-                <ul class="image">
+                <ul class="image" id="imageul">
                     <li>
                         <a href="#">
                             <div>
@@ -406,19 +406,19 @@
                     <h4>Top Restorants in kannur</h4>
                     <ul>
                         <li>
-                            <button onclick="rightBtn()">
+                            <button onclick="rightBtn('top-shopul')">
                                 <i class="material-icons">arrow_back</i>
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button onclick="leftBtn('top-shopul')">
                                 <i class="material-icons">arrow_forward</i>
                             </button>
                         </li>
                     </ul>
                 </div>
                 <div class="top-shop">
-                    <ul>
+                    <ul id="top-shopul">
                         <li>
                             <a href="#">
                                 <div class="topShopImg">

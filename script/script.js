@@ -1,24 +1,24 @@
 const blank = document.getElementById("blank")
-function signInFunction(){
+function signInFunction() {
     blank.style.display = "flex"
     blank.innerHTML = loginContent
     document.getElementById("left-blank").style.width = "100vw"
     document.getElementsByTagName("body")[0].style.overflow = "hidden"
-    const b = setTimeout(blankHide,5);
+    const b = setTimeout(blankHide, 5);
 }
-function cartSignin(){
+function cartSignin() {
     // const blank = document.getElementById("blank")
     document.getElementById("accountBtn").style.display = "none"
     document.getElementById("cartContent").innerHTML = cartSign
 }
-function cartLogin(){
+function cartLogin() {
     document.getElementById("accountBtn").style.display = "none"
     document.getElementById("cartContent").innerHTML = cartLog
 }
-function loginClose(){
+function loginClose() {
     document.getElementById("left-blank").style.width = "100vw"
-    const a = setTimeout(asdf,500)
-    function asdf(){
+    const a = setTimeout(asdf, 500)
+    function asdf() {
         blank.style.display = "none";
         document.getElementsByTagName("body")[0].style.overflow = "scroll"
     }
@@ -146,78 +146,77 @@ const referCode = `<form>
 <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
 </form>`
 // document.getElementById("referal").addEventListener("click",b)
-function referalFun(){
+function referalFun() {
     document.getElementById("inpField").innerHTML = referCode;
     // signupContent = referCode
 
 }
 var moveBlank = true;
 var loginFlag = true;
-function signInAndLogIn(){
-    if(loginFlag == true){
+function signInAndLogIn() {
+    if (loginFlag == true) {
         document.getElementById("blank").innerHTML = signupContent
         loginFlag = false
     }
-    else{
+    else {
         loginFlag = true
         document.getElementById("blank").innerHTML = loginContent
     }
-    if(moveBlank == true){
-        const b = setTimeout(blankHide,10);
+    if (moveBlank == true) {
+        const b = setTimeout(blankHide, 10);
         moveBlank = false
     }
     // document.getElementById("left-blank").style.width = "62.5vw"
 }
-function blankHide(){
+function blankHide() {
     document.getElementById("left-blank").style.width = "62.5vw"
 }
 
 
 offerScroll = 3000
-function moveRight(){
+function moveRight() {
     const offer_ul = document.getElementById("offer-ul")
-    offer_ul.scrollLeft +=400
+    offer_ul.scrollLeft += 400
     // offer_ul.scrollRight += 10
-    offerScroll+=200
+    offerScroll += 200
     offer_ul.scrollTo({
-        top:0,
-        left:offerScroll,
-        behavior:'smooth'
+        top: 0,
+        left: offerScroll,
+        behavior: 'smooth'
     })
 }
-function moveLeft(){
+function moveLeft() {
     const offer_ul = document.getElementById("offer-ul")
     console.log
-    offer_ul.scrollLeft -=400
+    offer_ul.scrollLeft -= 400
     offerScroll -= 500
     offer_ul.scrollTo({
-        top:0,
-        left:offerScroll,
-        behavior:'smooth'
+        top: 0,
+        left: offerScroll,
+        behavior: 'smooth'
     })
     // offer_ul.scrollRight += 10
 }
-function rightBtn(offerul){
-    var container = document.getElementById(offerul);
-    sideScroll(container,'right',4,600,10);
+function rightBtn(scrollDiv) {
+    var container = document.getElementById(scrollDiv);
+    sideScroll(container, 'right', 4, 600, 10);
 }
-function leftBtn(offerul){
-    var container = document.getElementById(offerul);
-    sideScroll(container,'left',4,600,10);
+function leftBtn(scrollDiv) {
+    var container = document.getElementById(scrollDiv);
+    sideScroll(container, 'left', 4, 600, 10);
 }
 
-
-function sideScroll(element, direction,speed, distance,  step){
-    scrollAmount =0;
-    var slideTimer = setInterval(function(){
-        if(direction == "left"){
+function sideScroll(element, direction, speed, distance, step) {
+    scrollAmount = 0;
+    var slideTimer = setInterval(function () {
+        if (direction == "right") {
             element.scrollLeft -= step;
-        }else{
+        } else {
             element.scrollLeft += step;
         }
         scrollAmount += step;
-        if(scrollAmount>=distance){
+        if (scrollAmount >= distance) {
             window.clearInterval(slideTimer);
         }
-    },speed)
+    }, speed)
 }
