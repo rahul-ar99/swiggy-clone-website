@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>swiggy-Help</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet"
+    />
+</head>
+<body>
+           <!--  ------------------------ top-section -------------------------------- -->
+           <section id="top-section">
+            <div class="wrapper">
+                    <div class="left helpLeft">
+                        <h1>
+                            <a href="index.html"
+                                ><img
+                                    src="images/swiggy-small-icon.png"
+                                    alt="Swiggy icon"
+                                />
+                            </a>
+                        </h1>
+                        <div class="location">
+                            <p>HELP</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <p>Search</p>
+                                </a>
+                            </li>
+                            <li id="offer-new">
+                                <a href="offer.html">
+                                    <i class="fa fa-empire" aria-hidden="true"></i>
+                                    <p>Offers <span>new</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="help.html" class="active">
+                                    <i
+                                    class="fa fa-life-buoy"
+                                    aria-hidden="true"
+                                    ></i>
+                                    <p>Help</p>
+                                </a>
+                            </li>
+                            <li onclick="signInFunction()">
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <p>Sign In</p>
+                            </li>
+                            <li>
+                                <a href="cart.html"
+                                    ><i
+                                        class="fa fa-shopping-bag"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <p>Cart</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div id="blank">
+                <div class="left-blank"  id="left-blank" onclick="loginClose()"></div>
+                    <div class="signin" id="signin">
+                        <div class="content">
+                            <button onclick="loginClose()"><i class="fa fa-close"></i></button>
+                            <div class="head">
+                                <h5>Login</h5>
+                                <p>or <span onclick="signInAndLogIn()">create an account</span></p>
+                                <img src="images/login.webp" alt="flower image">
+                            </div>
+                            <div class="inpField">
+                                <form action="">
+                                    <input type="number" placeholder="Phone number" max="10" required/>
+                                    <button>LOGIN</button>
+                                </form>
+                                <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!--  ------------------------ top-section -------------------------------- -->
+
+        <section id="helpSupport">
+            <div class="head">
+                <h6>Help & Support</h6>
+                <p>Let's take a step ahead and help you beter</p>
+            </div>
+            <div class="content">
+                <div class="leftHead">
+                    <button>Partner Onboarding</button>
+                    <button>Legal</button>
+                    <button>FAQs</button>
+                </div>
+                <div class="rightContent">
+                    <h6>Partner Onboarding</h6>
+                    <ul class="main">
+                        <li>
+                            <div class="contentHead"><p>I want to partner my resaurant with Swiggy</p></div>
+                            <div class="contentDetail">
+                                <span>parner with us</span>
+                                <button>SENT AN EMAIL</button>
+                                <P>WE WILL REVERT WITHIN 24-48 HRS</P>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contentHead"><p>Wha are the mandatory documents needed to list my resaurant on Swiggy?</p></div>
+                            <div class="contentDetail">
+                                <ul class="sub">
+                                    <li>Copies of the below documents ae mandatory</li>
+                                    <li>FSSAI Licence OR FSSAI Acknowledgement</li>
+                                    <li>Pan Card</li>
+                                    <li>GSTNIN Certificate</li>
+                                    <li>Cancelled Cheque OR bank Passbook</li>
+                                    <li>Menu</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contentHead"><p>After I submit all documents, how long wil it take for my resaurant to go live on Swiggy?</p></div>
+                            <div class="contentDetail">
+                                <p>After all mandatory documents have been recived and verified it takes upto 7-10 working days for the onboarding to be completed and make yor restaurant live on theplatform</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contentHead"><p>What is this on time Onboarding fees? Do I have to pay for it while registering?</p></div>
+                            <div class="contentDetail">
+                                <p>This is one-time fee charged towards the system & admin costs incurred during the onboarding process. it is deducted from the weekly payouts after you start receiving orders from Swiggy</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contentHead"><p>Who should I contact if I need help & suport in getting onboarded?</p></div>
+                            <div class="contentDetail">
+                                <p>You can connect with Partner Support on 080-345346235345/345/345/34 or write to partnersuport@swiggy</p>
+                                <button>SENT AN EMAIL</button>
+                                <P>WE WILL REVERT WITHIN 24-48 HRS</P>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contentHead"><p>How much commission will i be charged by Swiggy</p></div>
+                            <div class="contentDetail">
+                                <p>The commission charges vary for different cities. You will be able to see the commission applicable for youonce the preliminary onboarding details have been filled.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contentHead"><p>I don't have an FSSAI licence for my resaurant. Can it still be onboarded?</p></div>
+                            <div class="contentDetail">
+                                <p>Fssai licence is a mandatory requirement according to the goverment's policies However. If you are yet to recive the licence at the time of onboarding, you can proceed with the acknowledgement number which you will have received form FSSAI for your registration.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+
+    
+</body>
+<script type="text/javascript" src="script/script.js"></script>
+</html>

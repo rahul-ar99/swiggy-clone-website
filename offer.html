@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/style.css" />
+        <title>Swiggy Website</title>
+        <link rel="icon" href="images/swiggy-small-icon.png">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+                <!--  ------------------------ top-section -------------------------------- -->
+                <section id="top-section">
+                    <div class="wrapper">
+                            <div class="left">
+                                <h1>
+                                    <a href="index.html"
+                                        ><img
+                                            src="images/swiggy-small-icon.png"
+                                            alt="Swiggy icon"
+                                    /></a>
+                                </h1>
+                                <div class="location">
+                                    <p>Other</p>
+                                    <span>Kolkata, West Bengal, India</span>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                            <p>Search</p>
+                                        </a>
+                                    </li>
+                                    <li id="offer-new">
+                                        <a href="">
+                                            <i class="fa fa-empire" aria-hidden="true"></i>
+                                            <p>Offers <span>new</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="help.html">
+                                            <i
+                                            class="fa fa-life-buoy"
+                                            aria-hidden="true"
+                                            ></i>
+                                            <p>Help</p>
+                                        </a>
+                                    </li>
+                                    <li onclick="signInFunction()">
+                                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                                        <p>Sign In</p>
+                                    </li>
+                                    <li>
+                                        <a href="cart.html"
+                                            ><i
+                                                class="fa fa-shopping-bag"
+                                                aria-hidden="true"
+                                            ></i>
+                                            <p>Cart</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div id="blank">
+                        <!-- <div class="left-blank"  id="left-blank" onclick="loginClose()"></div>
+                            <div class="signin" id="signin">
+                                <div class="content">
+                                    <button onclick="loginClose()"><i class="fa fa-close"></i></button>
+                                    <div class="head">
+                                        <h5>Login</h5>
+                                        <p>or <span onclick="signInAndLogIn()">create an account</span></p>
+                                        <img src="images/login.webp" alt="flower image">
+                                    </div>
+                                    <div class="inpField">
+                                        <form action="">
+                                            <input type="number" placeholder="Phone number" max="10" required/>
+                                            <button>LOGIN</button>
+                                        </form>
+                                        <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
+                                    </div>
+                                </div>
+                            </div> -->
+                        <div class="location">
+                            <div class="left">
+        
+                            </div>
+                            <!-- <div class="right">
+                                
+                            </div> -->
+        
+                        </div>
+                    </div>
+                </section>
+                <!--  ------------------------ top-section -------------------------------- -->
+
+
+        <!--  ------------------------ main-content -------------------------------- -->
+
+        <section id="main-content"  class="offerTop">
+            <div class="wrapper">
+                <div class="head">
+                    <h4>Restaurants with online food delivery in Kolkata</h4>
+                </div>
+                <div class="sort-items">
+                    <ul>
+                        <!-- ---------- filter heads coming from js loop -------------- -->
+                        <!-- <li>
+                            <button>
+                                filter<i class="material-icons">arrow_back</i>
+                            </button>
+                        </li> -->
+                        
+                    </ul>
+                </div>
+
+                <div class="foods">
+                    <ul>
+                        <!-- mainFood details coming from js loop -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--  ------------------------ end main-content -------------------------------- -->
+
+                <!--  ------------------------ bottom-part -------------------------------- -->
+
+                <section id="bottom-part">
+                    <div class="wrapper">
+                        <div class="Best-places">
+                            <h6>Best Places to Eat Across Cities</h6>
+                            <ul>
+                                <!-- <li>
+                                    <a href="#">Best Restaurants in kerala</a>
+                                </li> -->
+                                
+                            </ul>
+                        </div>
+                        <div class="culslnes">
+                            <h6>Best Culslnes Near Me</h6>
+                            <ul>
+                                <!-- <li>
+                                    <a href="#">Chinese Restaurant Near Me</a>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <div class="every-shops">
+                            <h6>Explore Every Restaurants Near Me</h6>
+                            <ul>
+                                <li>
+                                    <a href="#">Explore Restaurants Near Me</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        >Explore Top Rated Restaurants Near Me</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+        
+                <!--  ------------------------ end of bottom-part -------------------------------- -->
+        
+                <!--  ------------------------ apps -------------------------------- -->
+        
+                <section id="apps">
+                    <h5>For better experience, download<br />the Swiggy app now</h5>
+                    <a  href="https://play.google.com/store/apps/details?id=in.swiggy.android&referrer=utm_source%3Dswiggy%26utm_medium%3Dheader&pli=1" target="_blank"
+                        ><img src="images/playstore.png" alt="download from playstore"
+                    /></a>
+                    <a href="https://apps.apple.com/in/app/swiggy-food-grocery-delivery/id989540920?referrer=utm_source%3Dswiggy%26utm_medium%3Dhomepage" target="_blank"
+                        ><img src="images/appstore.png" alt="download from appstore"
+                    /></a>
+                </section>
+        
+                <!--  ------------------------ end apps -------------------------------- -->
+        
+                <!--  ------------------------ footer -------------------------------- -->
+        
+                <footer>
+                    <div class="logo">
+                        
+                        <h5><img src="images/swiggy-small-icon.png" alt="Swiggy Icon"/>swiggy</h5>
+                        <p>2023 Bundl Technologies Pvt. Ltd</p>
+                    </div>
+                    <div class="company">
+                        <h6>Company</h6>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Swiggy One</a></li>
+                            <li><a href="#">Swiggy Instamart</a></li>
+                            <li><a href="#">Swiggy Genie</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact">
+                        <h6>contact us</h6>
+                        <ul>
+                            <li><a href="#">Help & Support</a></li>
+                            <li><a href="#">Partner with us</a></li>
+                            <li><a href="#">Ride with me</a></li>
+                        </ul>
+                        <h6>Legal</h6>
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="deliver">
+                        <h6>We deliver to:</h6>
+                        <ul>
+                            <li><a href="#">Bangalore</a></li>
+                            <li><a href="#">Gurgaon</a></li>
+                            <li><a href="#">Hyderabad</a></li>
+                            <li><a href="#">Delhi</a></li>
+                            <li><a href="#">Mumbai</a></li>
+                            <li><a href="#">Pune</a></li>
+                            <button>589 cities
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </button>
+                        </ul>
+                    </div>
+                  </footer>
+                  <section id="other_cities">
+                    <h6>Other cities that we deliver:</h6>
+                    <div>
+                        <ul>
+                            <!-- <li>
+                                <p>Kolkata</p>
+                            </li> -->
+                            
+                        </ul>
+                    </div>
+                  </section>
+                <!--  ------------------------ end of footer -------------------------------- -->
+        
+    </body>
+    <script type="text/javascript" src="script/offer.js"></script>
+</html>
