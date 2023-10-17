@@ -348,9 +348,12 @@ for (let i = 1; i < 20; i++) {
         </div>
         <div class="topShopImgDet">
             <h6>Domino's Pizza</h6>
-            <p class="rating">
-                <i class="fa fa-user"></i>4.3
-            </p>
+            <span class="rating">
+                <img
+                    src="images/icons/star-inside-circle(1).png"
+                    alt="star icon"
+                />4.3</span
+            >
             <p>North Indian, South Indian Burrabazar</p>
         </div>
     </a>
@@ -452,3 +455,21 @@ outDelivery.addEventListener("click", function () {
         document.querySelector("footer .deliver button i").style.transform = "rotate(0deg)"
     }
 })
+
+
+function helpButton(btn) {
+    switch (btn) {
+        case partnerOnboarding:
+            document.querySelector(".partnerOnboarding").style.display = flex
+            document.querySelector(".legal").style.display = none
+            document.querySelector(".faqs").style.display = none
+        case legal:
+            document.querySelector(".partnerOnboarding").style.display = none
+            document.querySelector(".legal").style.display = flex
+            document.querySelector(".faqs").style.display = none
+        case faqs:
+            document.querySelector(".faqs").style.display = none
+            document.querySelector(".legal").style.display = none
+            document.querySelector(".faqs").style.display = flex
+    }
+}

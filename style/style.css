@@ -578,7 +578,12 @@ hr {
 
 }
 
-#top-shops .top-shop ul li a img {
+#top-shops .top-shop ul li .topShopImgDet .rating {
+    display: flex;
+
+}
+
+#top-shops .top-shop .topShopImg img {
     width: 110%;
     /* height: 100%; */
     border-radius: 20px;
@@ -597,7 +602,9 @@ hr {
 
 #top-shops .top-shop ul li a span {}
 
-#top-shops .top-shop ul li a p {}
+#top-shops .top-shop ul li a p {
+    color: #848484;
+}
 
 #main-content {}
 
@@ -682,6 +689,7 @@ hr {
 
 #main-content .foods a .food-img img {
     width: 100%;
+    /* filter: hue-rotate(90deg); */
 
 }
 
@@ -697,13 +705,16 @@ hr {
 }
 
 #main-content .foods ul li a .food-details p {
-    color: #424242;
+    color: #848484;
     font-size: 14px;
     line-height: 20px;
 }
 
-#main-content .foods ul li a .food-details img {
+#main-content .foods ul li a .food-details img,
+.topShopImgDet img {
     height: 20px;
+    margin-right: 5px;
+    filter: hue-rotate(330deg);
 
 }
 
@@ -1086,4 +1097,8 @@ footer ul li a {
 
 #helpSupport .content .rightContent {
     width: 65%;
+}
+
+#helpSupport .content .rightContent .partnerOnboarding {
+    /* display: none; */
 }
