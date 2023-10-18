@@ -456,20 +456,3 @@ outDelivery.addEventListener("click", function () {
     }
 })
 
-
-function helpButton(btn) {
-    switch (btn) {
-        case partnerOnboarding:
-            document.querySelector(".partnerOnboarding").style.display = flex
-            document.querySelector(".legal").style.display = none
-            document.querySelector(".faqs").style.display = none
-        case legal:
-            document.querySelector(".partnerOnboarding").style.display = none
-            document.querySelector(".legal").style.display = flex
-            document.querySelector(".faqs").style.display = none
-        case faqs:
-            document.querySelector(".faqs").style.display = none
-            document.querySelector(".legal").style.display = none
-            document.querySelector(".faqs").style.display = flex
-    }
-}
