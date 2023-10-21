@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding:0;
 
 }
 
@@ -8,13 +9,11 @@ body {
     font-family: sans-serif;
 
 }
-
 section {
     display: flex;
     justify-content: center;
 
 }
-
 button:hover {
     cursor: pointer;
 }
@@ -1073,7 +1072,7 @@ footer ul li a {
     padding-top: 100px;
     display: block;
     padding: 100px 390px 0;
-    background-color: #5d8ed5;
+    background-color: #92b0dd;
 }
 
 #helpSupport .head {
@@ -1084,20 +1083,76 @@ footer ul li a {
 
 #helpSupport .content {
     width: 100%;
-    background-color: #fff;
+    /* background-color: #fff; */
     display: flex;
-    padding: 45px;
+    padding: 45px 45px 45px 45px;
+    background-color: #ffffff;
+    column-gap: 10px;
+    height: auto;
 }
 
 #helpSupport .content .leftHead {
     width: 30%;
+    height: inherit;
+    background-color: #c7d9ea;
     display: flex;
     flex-direction: column;
+    padding: 30px 0px 0px 30px;
+}
+
+#helpSupport .content .leftHead button{
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 25px 0 25px 40px;
+    background-color: #ffffff;
+    font-size: 15px;
+    color: #4f4949;
+    text-align: left;
+    font-weight: 600;
+}
+#helpSupport .content .leftHead button:hover{
+    color: black;
+    font-size: 16px;
 }
 
 #helpSupport .content .rightContent {
     width: 65%;
+    min-height: 800px;
+    background-color: #ffffff;
 }
+
+#helpSupport .content .rightContent h6{
+    font-size:20px;
+}
+
+#helpSupport .content .rightContent ul{
+    font-size:20px;
+}
+#helpSupport .content .rightContent ul li{
+    list-style: none;
+    border-bottom: 1px solid rgb(123, 120, 120);
+    border-width: 220%;
+}
+
+#helpSupport .content .rightContent ul li .contentHead{
+    list-style: none;
+    padding: 10px;
+}
+
+#helpSupport .content .rightContent ul li .contentDetail{
+    display: none;
+    font-size: 12px;
+    color: #5b5757;
+}
+#helpSupport .content .rightContent ul li .contentDetail ul{
+    padding-left: 30px;
+
+}
+#helpSupport .content .rightContent ul li .contentDetail ul li{
+    border:none;
+    list-style:circle;
+}
+
 
 #helpSupport .content .rightContent .partnerOnboarding {
     /* display: none; */

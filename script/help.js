@@ -99,7 +99,6 @@ function signInFunction() {
     const b = setTimeout(blankHide, 5);
 }
 
-
 // close main login sheet from window
 function loginClose() {
     document.getElementById("left-blank").style.width = "100vw"
@@ -114,19 +113,9 @@ function loginClose() {
 // add referal input to signin page
 function referalFun() {
     document.getElementById("inpField").innerHTML = referCode;
-
 }
 
-
-
-
-
-
-
-
-
 function helpButton(btn) {
-
     if (btn == 'partnerOnboarding') {
         document.querySelector(".partnerOnboarding").style.display = "block"
         document.querySelector(".legal").style.display = "none"
@@ -142,4 +131,19 @@ function helpButton(btn) {
         document.querySelector(".legal").style.display = "none"
         document.querySelector(".faqs").style.display = "block"
     }
+}
+
+
+// collapsibles function in help html
+var helpHead = document.getElementsByClassName('contentHead');
+for(let i=0;i<helpHead.length;i++){
+    helpHead[i].addEventListener("click",function(){
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if(content.style.display ==="block"){
+            content.style.display = "none";
+        } else {
+            content.style.display = "block"
+        }
+    })
 }
