@@ -1079,6 +1079,7 @@ footer ul li a {
     width: 60%;
     display: block;
     justify-content: left;
+    font-size: 25px;
 }
 
 #helpSupport .content {
@@ -1090,6 +1091,7 @@ footer ul li a {
     column-gap: 10px;
     height: auto;
 }
+
 
 #helpSupport .content .leftHead {
     width: 30%;
@@ -1131,18 +1133,47 @@ footer ul li a {
 #helpSupport .content .rightContent ul li{
     list-style: none;
     border-bottom: 1px solid rgb(123, 120, 120);
-    border-width: 220%;
 }
 
 #helpSupport .content .rightContent ul li .contentHead{
     list-style: none;
     padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#helpSupport .content .rightContent ul li .contentHead p:hover{
+    color: orange;
+    cursor: pointer;
 }
 
 #helpSupport .content .rightContent ul li .contentDetail{
-    display: none;
-    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
     color: #5b5757;
+}
+#helpSupport .content .rightContent ul li .contentDetail p{
+    color: #000000;
+    padding:0px 10px 10px 12px;
+    font-size: 16px;
+}
+
+#helpSupport .content .rightContent ul li .contentDetail .btndown{
+    color:#a8a8a8;
+    padding: 20px 0;
+}
+
+#helpSupport .content .rightContent ul li .contentDetail button{
+    white-space:nowrap;
+    padding: 8px 10px;
+    border: 2px solid rgba(255, 166, 0, 0.661);
+    color: rgb(255, 166, 0);
+    font-weight: 600;
+    background-color: #ffffff;
+    text-transform:uppercase;
+    width: min-content;
 }
 #helpSupport .content .rightContent ul li .contentDetail ul{
     padding-left: 30px;
@@ -1151,9 +1182,14 @@ footer ul li a {
 #helpSupport .content .rightContent ul li .contentDetail ul li{
     border:none;
     list-style:circle;
+
+}
+
+#helpSupport .content .rightContent ul li .contentDetail ul li .btndown{
+
 }
 
 
-#helpSupport .content .rightContent .partnerOnboarding {
+#helpSupport .content .rightContent .partnerOnboarding p{
     /* display: none; */
 }
