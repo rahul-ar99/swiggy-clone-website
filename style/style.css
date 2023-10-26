@@ -1039,7 +1039,6 @@ footer ul li a {
 
 #cart-bottom .right div {
     width: 300px;
-
 }
 
 #cart-bottom .right div img {
@@ -1148,6 +1147,7 @@ footer ul li a {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items:start;
 }
 #helpSupport .content .rightContent ul li .contentHead i{
     color: #60b246;

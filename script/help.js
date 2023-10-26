@@ -152,19 +152,13 @@ for(let i=0;i<helpHead.length;i++){
     helpHead[i].addEventListener("click",function(){
         // this.classList.toggle("active");
         // this.addClasse
+        helpHead[i].className += " active"
         var content = this.nextElementSibling;
         if(content.style.display ==="flex"){
             content.style.display = "none";
-            helpHead[i] += " active"
-            // const list = document.classList
-            // const list = document.querySelector(".contentHead i").classList
-            document.getElementById("helpArrow").style.rotate = "0deg"
-            
-            list.style.rotate = "180deg"
-            // this.getElementsByTagName(i)
+            helpHead[i].className = "contentHead"
         } else {
             content.style.display = "flex"
-            document.getElementById("helpArrow").style.rotate = "180deg"
         }
     })
 }

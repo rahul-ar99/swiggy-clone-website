@@ -312,7 +312,7 @@ function sideScroll(element, direction, speed, distance, step) {
     var slideTimer = setInterval(function () {
         if (direction == "right") {
             element.scrollLeft -= step;
-        } else {
+        }else{
             element.scrollLeft += step;
         }
         scrollAmount += step;
