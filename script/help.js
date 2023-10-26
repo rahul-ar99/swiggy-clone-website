@@ -114,22 +114,34 @@ function loginClose() {
 function referalFun() {
     document.getElementById("inpField").innerHTML = referCode;
 }
-
+let helpOld = 'partnerOnboarding'
 function helpButton(btn) {
+    // for()
     if (btn == 'partnerOnboarding') {
         document.querySelector(".partnerOnboarding").style.display = "block"
         document.querySelector(".legal").style.display = "none"
         document.querySelector(".faqs").style.display = "none"
+        document.querySelector("#legalBtn").style.background= "#eaeaea          "
+        document.querySelector("#faqsBtn").style.background= "#eaeaea"
+        document.querySelector("#partnerBtn").style.background= "white"
+
+
     }
     else if (btn == 'legal') {
         document.querySelector(".partnerOnboarding").style.display = "none"
         document.querySelector(".legal").style.display = "block"
         document.querySelector(".faqs").style.display = "none"
+        document.querySelector("#legalBtn").style.background= "white"
+        document.querySelector("#faqsBtn").style.background= "#eaeaea"
+        document.querySelector("#partnerBtn").style.background= "#eaeaea"
     }
     else if (btn == 'faqs') {
         document.querySelector(".partnerOnboarding").style.display = "none"
         document.querySelector(".legal").style.display = "none"
         document.querySelector(".faqs").style.display = "block"
+        document.querySelector("#legalBtn").style.background= "#eaeaea"
+        document.querySelector("#faqsBtn").style.background= "white"
+        document.querySelector("#partnerBtn").style.background= "#eaeaea"
     }
 }
 
@@ -138,12 +150,21 @@ function helpButton(btn) {
 var helpHead = document.getElementsByClassName('contentHead');
 for(let i=0;i<helpHead.length;i++){
     helpHead[i].addEventListener("click",function(){
-        this.classList.toggle("active");
+        // this.classList.toggle("active");
+        // this.addClasse
         var content = this.nextElementSibling;
         if(content.style.display ==="flex"){
             content.style.display = "none";
+            helpHead[i] += " active"
+            // const list = document.classList
+            // const list = document.querySelector(".contentHead i").classList
+            document.getElementById("helpArrow").style.rotate = "0deg"
+            
+            list.style.rotate = "180deg"
+            // this.getElementsByTagName(i)
         } else {
             content.style.display = "flex"
+            document.getElementById("helpArrow").style.rotate = "180deg"
         }
     })
 }

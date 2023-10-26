@@ -1097,9 +1097,13 @@ footer ul li a {
     width: 30%;
     height: inherit;
     background-color: #c7d9ea;
+    padding: 30px 0px 0px 30px;
+}
+#helpSupport .content .leftHead .leftBtns{
     display: flex;
     flex-direction: column;
-    padding: 30px 0px 0px 30px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 #helpSupport .content .leftHead button{
@@ -1115,6 +1119,9 @@ footer ul li a {
 #helpSupport .content .leftHead button:hover{
     color: black;
     font-size: 16px;
+}
+#helpSupport #faqsBtn,#helpSupport #legalBtn{
+    background-color: #eaeaea;
 }
 
 #helpSupport .content .rightContent {
@@ -1142,6 +1149,14 @@ footer ul li a {
     display: flex;
     justify-content: space-between;
 }
+#helpSupport .content .rightContent ul li .contentHead i{
+    color: #60b246;
+    /* rotate: 180deg; */
+    transition: .5s;
+}
+#helpSupport .content .rightContent ul li .active i{
+    rotate: 180deg;
+}
 
 #helpSupport .content .rightContent ul li .contentHead p:hover{
     color: orange;
@@ -1149,7 +1164,7 @@ footer ul li a {
 }
 
 #helpSupport .content .rightContent ul li .contentDetail{
-    display: flex;
+    display: none;
     flex-direction: column;
     font-size: 14px;
     color: #5b5757;
@@ -1182,7 +1197,6 @@ footer ul li a {
 #helpSupport .content .rightContent ul li .contentDetail ul li{
     border:none;
     list-style:circle;
-
 }
 
 #helpSupport .content .rightContent ul li .contentDetail ul li .btndown{
@@ -1192,4 +1206,14 @@ footer ul li a {
 
 #helpSupport .content .rightContent .partnerOnboarding p{
     /* display: none; */
+}
+#helpSupport .content .rightContent .legal{
+    display: none;
+}
+#helpSupport .content .rightContent .faqs{
+    display: none;
+}
+
+#partnerBtn{
+    background-color: #bf4545;
 }
