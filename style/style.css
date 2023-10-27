@@ -1150,7 +1150,7 @@ footer ul li a {
     align-items:start;
 }
 #helpSupport .content .rightContent ul li .contentHead i{
-    color: #60b246;
+    color: orange;
     /* rotate: 180deg; */
     transition: .5s;
 }
@@ -1192,7 +1192,6 @@ footer ul li a {
 }
 #helpSupport .content .rightContent ul li .contentDetail ul{
     padding-left: 30px;
-
 }
 #helpSupport .content .rightContent ul li .contentDetail ul li{
     border:none;
