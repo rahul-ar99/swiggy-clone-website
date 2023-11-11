@@ -1,8 +1,3 @@
-// module.exports { cart }
-
-// const data = require('./file.json')
-
-// const indian_cities = data['cities']
 
 
 // cartLog and cartSign its for cart html down login and signin div
@@ -26,6 +21,13 @@ const cartLog = `<div class="head">
     inputmode="numeric"
     placeholder="Phone number"
     oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+    maxlength = "10"
+    required
+/>
+<input
+    type="password"
+    inputmode="numeric"
+    placeholder="Password"
     maxlength = "10"
     required
 />
@@ -70,7 +72,11 @@ required />
     placeholder="Email"
     required
 />
-<a onclick="referalFun()"><p id="referal">Have a referal code?</p></a>
+<input 
+type="password"
+placeholder="Password"
+maxlength="40"
+required />
 <input type="submit" value="SIGN UP">
 </form>
 <p>
@@ -90,16 +96,23 @@ const loginContent = `<div class="left-blank"  id="left-blank" onclick="loginClo
             <p>or <span onclick="signInAndLogIn()">create an account</span></p>
             <img src="images/login.webp" alt="flower image">
         </div>
-        <div class="inpField">
+        <div class="inpField logInC">
             <form>
-                <input    type="text"
-                inputmode="numeric"
-                placeholder="Phone number"
-                oninput="this.value = this.value.replace(/[^0-9 +]/g, '')"
-                minlength = "10"
-                maxlength = "14"
-                required/>
-                <input type="submit" value="LOGIN">
+            <input    type="text"
+            inputmode="numeric"
+            placeholder="Phone number"
+            oninput="this.value = this.value.replace(/[^0-9 +]/g, '')"
+            minlength = "10"
+            maxlength = "14"
+            name="username"
+            required/>
+            <input    type="password"
+            placeholder="Password"
+            minlength = "10"
+            maxlength = "14"
+            name="password"
+            required/>
+            <input type="submit" onclick="return userlogin()" value="LOGIN">
             </form>
             <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
         </div>
@@ -114,7 +127,7 @@ var signupContent = `<div class="left-blank"  id="left-blank" onclick="loginClos
         <p>or <span onclick="signInAndLogIn()">login to your account</span></p>
         <img src="images/login.webp" alt="flower image">
     </div>
-    <div class="inpField" id="inpField">
+    <div class="inpField signInC" id="inpField">
     <form>
         <input type="text"
         inputmode="numeric"
@@ -123,26 +136,21 @@ var signupContent = `<div class="left-blank"  id="left-blank" onclick="loginClos
         maxlength = "10"
         required/>
         <input type="text"
-        placeholder="Name"
+        placeholder="Username"
         maxlength="40"
         oninput="this.value = this.value.replace(/[^a-zA-Z .]/g, '')"
         required />
         <input type="email" placeholder="Email" required/>
-        <a href="#" id="referal" onclick="referalFun()"><p id="referal">Have a referal code?</p></a>
+        <input type="password"
+        placeholder="Password"
+        maxlength="40"
+        required />
         <input type="submit" value="SIGN UP">
     </form>
         <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
     </div>
 </div>
 </div>
-</form>`
-const referCode = `<form>
-<input type="number" placeholder="Phone number"/>
-<input type="text" placeholder="Name"/>
-<input type="email" placeholder="Email" requied/>
-<input type="text" placeholder="Referal Code" requied/>
-<button>SIGN UP</button>
-<P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
 </form>`
 const filterItems = ['filter', 'Sort By', 'Fast Delivery', 'New on Swiggy', 'Rating 4.0', 'Pure Veg', 'Offers', 'Rs.300-Rs.600', 'less than Rs.300']
 const foodHeads = ['Biryani', 'Chinese', 'North_Indian', 'Pizza', 'Burger', 'Noodles', 'Momos', 'Dosa', 'Cakes', 'Kebabs', 'Rolls', 'Pure_Veg', 'Ice_Creams', 'Paratha', 'Rasgulla', 'Desserts', 'Pasta', 'Pav_Bhaji', 'Chole_Bature', 'Pastry']
@@ -456,8 +464,11 @@ if(document.querySelector("#other_cities")!=null){
 
 }
 
-likeBtn = document.querySelector("#asd");
 
+// ------------ wish list -------------------
+
+likeBtn = document.querySelector("#asd");
+cartItem = 0
 var cart = []
 $(document).ready(function(){
     if(document.querySelector(".like")!=null){
@@ -468,20 +479,20 @@ $(document).ready(function(){
                 $(this).css("color","red");
                 
                 cart.push(`${$(this).parent().html()}`);
-                // console.log(cart.indexOf(currentItem))
-                // $(this).parent().css("backgroundColor","red")
+                // console.log(cart.indexOf(currentItem));
+                // $(this).parent().css("backgroundColor","red");
+                localStorage.setItem(cartItem,currentItem);
+                cartItem ++;
             }
             else{
+                localStorage.removeItem(0)
                 let cartCheck = cart.indexOf($(this).parent().html());
                 console.log(cartCheck);
-                
                 cart.splice(cart.indexOf($(this).parent().html()),1);
-                
                 console.log($(this).parent().html());
                 console.log(cartCheck);
                 $(this).css("color","rgb(181, 181, 181)");
             }
-
             if(document.querySelector(".wishLists")!=null){
                 for(let i of cart){
                     document.querySelector(".wishLists ul").innerHTML += i
@@ -492,3 +503,61 @@ $(document).ready(function(){
 
     }
 })
+
+if(document.querySelector(".wishLists")!=null){
+    for(let i=0;i<20;i++){
+        if(localStorage.getItem(i)!=null){
+            let wishitems = localStorage.getItem(i)
+            document.querySelector(".wishLists ul").innerHTML += `<li>${wishitems} </li>` 
+        }
+    }
+}
+
+
+
+
+
+// user signin function
+
+// if(document.querySelector(".logInC form")!=null){
+    // let form = document.querySelector(".logInC form");
+    // form.addEventListener("submit",(e)=>{
+    //     console.log("sdfds")
+    //     const username = form.username.value;
+    //     const password = form.password.value;
+    //     const authenticated = authentication(username,password)
+
+    // })
+
+    // if(authenticated){
+    //     alert("correct")
+
+    // }
+    // else(
+    //     alert("not correct")
+    // )
+
+// }
+
+function userlogin(){
+    const username = form.username.value;
+    const password = form.password.value;
+    const authenticated = authentication(username,password)
+
+    if(authenticated){
+        alert("correct")
+
+    }
+    else(
+        alert("not correct")
+    )
+}
+
+function authentication(username,password){
+    if(username=="7559824321" && password== "password11"){
+        return true
+    }
+    else{
+        return false
+    }
+}

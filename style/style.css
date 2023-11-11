@@ -673,6 +673,22 @@ hr {
     padding: 0;
     row-gap: 20px;
 }
+#main-content .wishLists{
+
+}
+
+
+#main-content .wishLists ul{
+    display: flex;
+    /* gap: 20px; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    row-gap: 20px;
+}
+
+
+
 
 #main-content .foods ul li {
     width: 24%;
@@ -1252,3 +1268,92 @@ footer ul li a {
 #partnerBtn{
     background-color: #bf4545;
 }
+
+
+
+
+/* ------------ wish list --------------- */
+
+#main-content .wishLists ul li{
+    width: 24%;
+    transition: 0.2s;
+    list-style: none;
+    position: relative;
+}
+
+#main-content .wishLists{
+    /* background-color: #424242; */
+}
+
+#main-content .wishLists ul li:hover {
+    transform: scale(.93);
+}
+
+
+#main-content .wishLists ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#main-content .wishLists a div {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+#main-content .wishLists .food-details {
+    padding-left: 20px;
+    width: 90%;
+    height: min-content;
+}
+#main-content .wishLists a .food-img {
+    position: relative;
+}
+
+#main-content .wishLists a .food-img img {
+    width: 100%;
+    /* filter: hue-rotate(90deg); */
+
+}
+#main-content .wishLists .like {
+    font-size: 30px;
+    width: 50px;
+    border-radius: none;
+    position: absolute;
+    bottom:50px;
+    right: -10px;
+    color: rgb(181, 181, 181);
+}
+
+#main-content .wishLists i:hover{
+    cursor: default;
+    /* color: red; */
+}
+
+
+#main-content .wishLists ul li a h6 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#main-content .wishLists ul li a .food-details span {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#main-content .wishLists ul li a .food-details p {
+    color: #848484;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#main-content .wishLists ul li a .food-details img,
+.topShopImgDet img {
+    height: 20px;
+    margin-right: 5px;
+    filter: hue-rotate(330deg);
+
+}
+
