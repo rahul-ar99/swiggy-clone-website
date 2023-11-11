@@ -245,6 +245,38 @@
                         </li> -->
                         
                     </ul>
+                    <div class="filter">
+                        <div class="headPart">
+                            <p class="head">Filter</p>
+                            <i class="fa fa-close"></i>
+                        </div>
+                        <div class="main-part">
+                            <div class="filterHead">
+                                <ul>
+                                    <li>Sort</li>
+                                    <li>Delivery Time</li>
+                                    <li>Cuisines</li>
+                                    <li>Ratings</li>
+                                    <li>Veg/Non-Veg</li>
+                                    <li>Offers</li>
+                                    <li>Cost for two</li>
+                                </ul>
+                            </div>
+                            <div class="headContent">
+                                <span>SORT BY</span>
+                                <input type="radio" name="sortby" id="relevance">
+                                <label for="relevance">relevance</label>
+                                <input type="radio" name="sortby" id="delTime">
+                                <label for="delTime">delivery Time</label>
+                                <input type="radio" name="sortby" id="rating">
+                                <label for="rating">rating</label>
+                                <input type="radio" name="sortby" id="costLow">
+                                <label for="costLow">costLow</label>
+                                <input type="radio" name="sortby" id="costHigh">
+                                <label for="costHigh">costHigh</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="foods">
@@ -254,6 +286,7 @@
                             <a href="#">
                                 <div class="food-img">
                                     <img src="images/food${i}.webp" alt="Pastry" />
+                                    <img src="images/icons/heart.png" alt="like button" />
                                 </div>
                                 <div class="food-details">
                                     <h6>Domino's Pizza</h6>
@@ -276,7 +309,7 @@
         <!--  ------------------------ end main-content -------------------------------- -->
 
         <!--  ------------------------ bottom-part -------------------------------- -->
-
+        
         <section id="bottom-part">
             <div class="wrapper">
                 <div class="Best-places">
@@ -389,5 +422,7 @@
           </section>
         <!--  ------------------------ end of footer -------------------------------- -->
     </body>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="script/script.js"></script>
 </html>

@@ -587,8 +587,11 @@ hr {
     /* height: 100%; */
     border-radius: 20px;
     display: block;
-
+    z-index: 0;
 }
+
+
+
 
 #top-shops .top-shop ul li a {
     text-decoration: none;
@@ -605,7 +608,9 @@ hr {
     color: #848484;
 }
 
-#main-content {}
+#main-content {
+    position: relative;;
+}
 
 #main-content .head {
     padding: 30px 0px;
@@ -613,7 +618,8 @@ hr {
 
 #main-content .head h4 {}
 
-#main-content .sort-items {}
+#main-content .sort-items {
+}
 
 #main-content .sort-items ul {
     display: flex;
@@ -643,6 +649,17 @@ hr {
     font-size: 15px;
 
 }
+#main-content .sort-items .filter{
+    position: absolute;
+    left: 23%;
+    top: 20px;
+    width: 55vw;
+    height: 60vh;
+    background-color: #848484;
+    z-index: 1;
+    display: none;
+}
+
 
 #main-content .foods {
     padding-top: 28px;
@@ -661,6 +678,7 @@ hr {
     width: 24%;
     transition: 0.2s;
     list-style: none;
+    position: relative;
 }
 
 #main-content .foods ul li:hover {
@@ -685,12 +703,30 @@ hr {
     width: 90%;
     height: min-content;
 }
+#main-content .foods a .food-img {
+    position: relative;
+}
 
 #main-content .foods a .food-img img {
     width: 100%;
     /* filter: hue-rotate(90deg); */
 
 }
+#main-content .foods .like {
+    font-size: 30px;
+    width: 50px;
+    border-radius: none;
+    position: absolute;
+    bottom:50px;
+    right: -10px;
+    color: rgb(181, 181, 181);
+}
+
+#main-content .foods i:hover{
+    cursor: default;
+    /* color: red; */
+}
+
 
 #main-content .foods ul li a h6 {
     font-size: 18px;

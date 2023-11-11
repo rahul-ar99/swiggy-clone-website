@@ -1,3 +1,5 @@
+// module.exports { cart }
+
 // const data = require('./file.json')
 
 // const indian_cities = data['cities']
@@ -208,12 +210,12 @@ const indian_cities =
     ]
 
 // blank for login page and signin page right side div
-const blank = document.getElementById("blank")
+const blank = document.getElementById("blank");
 function signInFunction() {
-    blank.style.display = "flex"
-    blank.innerHTML = loginContent
-    document.getElementById("left-blank").style.width = "100vw"
-    document.getElementsByTagName("body")[0].style.overflow = "hidden"
+    blank.style.display = "flex";
+    blank.innerHTML = loginContent;
+    document.getElementById("left-blank").style.width = "100vw";
+    document.getElementsByTagName("body")[0].style.overflow = "hidden";
     const b = setTimeout(blankHide, 5);
 }
 
@@ -221,26 +223,26 @@ function signInFunction() {
 // its for cart html signin button
 function cartSignin() {
     // const blank = document.getElementById("blank")
-    document.getElementById("accountBtn").style.display = "none"
-    document.getElementById("cartContent").innerHTML = cartSign
+    document.getElementById("accountBtn").style.display = "none";
+    document.getElementById("cartContent").innerHTML = cartSign;
 }
 
 // its for cart html login button
 function cartLogin() {
-    document.getElementById("accountBtn").style.display = "none"
-    document.getElementById("cartContent").innerHTML = cartLog
+    document.getElementById("accountBtn").style.display = "none";
+    document.getElementById("cartContent").innerHTML = cartLog;
 }
 
 
 // close main login sheet from window
 function loginClose() {
-    document.getElementById("left-blank").style.width = "100vw"
-    const a = setTimeout(asdf, 500)
+    document.getElementById("left-blank").style.width = "100vw";
+    const a = setTimeout(asdf, 500);
     function asdf() {
         blank.style.display = "none";
         document.getElementsByTagName("body")[0].style.overflow = "scroll"
     }
-    loginFlag = true
+    loginFlag = true;
 }
 
 // add referal input to signin page
@@ -255,31 +257,31 @@ var moveBlank = true;
 var loginFlag = true;
 function signInAndLogIn() {
     if (loginFlag == true) {
-        document.getElementById("blank").innerHTML = signupContent
-        loginFlag = false
+        document.getElementById("blank").innerHTML = signupContent;
+        loginFlag = false;
     }
     else {
-        loginFlag = true
-        document.getElementById("blank").innerHTML = loginContent
+        loginFlag = true;
+        document.getElementById("blank").innerHTML = loginContent;
     }
     if (moveBlank == true) {
         const b = setTimeout(blankHide, 10);
-        moveBlank = false
+        moveBlank = false;
     }
     // document.getElementById("left-blank").style.width = "62.5vw"
 }
 function blankHide() {
-    document.getElementById("left-blank").style.width = "62.5vw"
+    document.getElementById("left-blank").style.width = "62.5vw";
 }
 
 // horizondal scroll button function
 
-offerScroll = 3000
+offerScroll = 3000;
 function moveRight() {
     const offer_ul = document.getElementById("offer-ul")
-    offer_ul.scrollLeft += 400
+    offer_ul.scrollLeft += 400;
     // offer_ul.scrollRight += 10
-    offerScroll += 200
+    offerScroll += 200;
     offer_ul.scrollTo({
         top: 0,
         left: offerScroll,
@@ -288,9 +290,8 @@ function moveRight() {
 }
 function moveLeft() {
     const offer_ul = document.getElementById("offer-ul")
-    console.log
-    offer_ul.scrollLeft -= 400
-    offerScroll -= 500
+    offer_ul.scrollLeft -= 400;
+    offerScroll -= 500;
     offer_ul.scrollTo({
         top: 0,
         left: offerScroll,
@@ -320,139 +321,174 @@ function sideScroll(element, direction, speed, distance, step) {
             window.clearInterval(slideTimer);
         }
     }, speed)
-}
+}         
 
 // filter items add to html
-
-const filter_ = document.querySelector("#main-content .sort-items ul")
-for (let i of filterItems) {
-    filter_.innerHTML += `<li>
-    <button>
-        ${i}<i class="material-icons">arrow_back</i>
-    </button>
-</li>`
+if(document.querySelector("#main-content .sort-items ul")!=null){
+    const filter_ = document.querySelector("#main-content .sort-items ul")
+    for (let i of filterItems) {
+        filter_.innerHTML += `<li>
+        <button>
+            ${i}<i class="material-icons">arrow_back</i>
+        </button>
+    </li>`
+    }
 }
 
 
 // top-shop item with loop
-
-const topshop = document.getElementById('top-shopul')
-for (let i = 1; i < 20; i++) {
-    topshop.innerHTML += `<li>
-    <a href="#">
-        <div class="topShopImg">
-            <img
-                src="images/food${i}.webp"
-                alt="Food image"
-            />
-        </div>
-        <div class="topShopImgDet">
-            <h6>Domino's Pizza</h6>
-            <span class="rating">
+if(document.getElementById('top-shopul')!=null){
+    const topshop = document.getElementById('top-shopul')
+    for (let i = 1; i < 20; i++) {
+        topshop.innerHTML += `<li>
+        <a href="#">
+            <div class="topShopImg">
                 <img
-                    src="images/icons/star-inside-circle(1).png"
-                    alt="star icon"
-                />4.3</span
-            >
-            <p>North Indian, South Indian Burrabazar</p>
-        </div>
-    </a>
-</li>`
+                    src="images/food${i}.webp"
+                    alt="Food image"
+                />
+    
+            </div>
+            <div class="topShopImgDet">
+                <h6>Domino's Pizza</h6>
+                <span class="rating">
+                    <img
+                        src="images/icons/star-inside-circle(1).png"
+                        alt="star icon"
+                    />4.3</span
+                >
+                <p>North Indian, South Indian Burrabazar</p>
+            </div>
+        </a>
+    </li>`
+    }
 }
 
 
 // main-content items with loop
-const mainFoods = document.querySelector("#main-content .foods ul")
-for (let i = 1; i <= 20; i++) {
-    mainFoods.innerHTML += `<li>
-    <a href="#">
-        <div class="food-img">
-            <img src="images/food${i}.webp" alt="Pastry" />
-        </div>
-        <div class="food-details">
-            <h6>Domino's Pizza</h6>
-            <span class="rating">
-                <img
-                    src="images/icons/star-inside-circle(1).png"
-                    alt="star icon"
-                />4.3</span
-            >
-            <p>North Indian, Indian Burrabazar</p>
-            <p>Kolkata</p>
-        </div>
-    </a>
-</li>`
+if(document.querySelector("#main-content .foods ul") != null){
+    const mainFoods = document.querySelector("#main-content .foods ul")
+    for (let i = 1; i <= 20; i++) {
+        mainFoods.innerHTML += `<li>
+        <a href=""><div class="food-img"><img src="images/food${i}.webp" alt="Pastry" /></div><div class="food-details"><h6>${foodHeads[i]}</h6><span class="rating"><img src="images/icons/star-inside-circle(1).png" alt="star icon"/>4.3</span><p>North Indian, Indian Burrabazar</p><p>Kolkata</p></div></a><i class="fa fa-heart like" id="asd"></i></li>`
+}
 }
 
 
 // food-items items with loop
-const fooditems = document.querySelector("#food-items .image")
-for (let i of foodHeads) {
-    fooditems.innerHTML += `
-    <li>
-        <a href="#">
-            <div>
-                <img
-                    src="images/${i}.webp"
-                    alt="${i} image"
-                />
-            </div>
-        </a>
-    </li>
-    `
+if(document.querySelector("#food-items .image")!=null){
+    const fooditems = document.querySelector("#food-items .image");
+    for (let i of foodHeads) {
+        fooditems.innerHTML += `
+        <li>
+            <a href="#">
+                <div>
+                    <img
+                        src="images/${i}.webp"
+                        alt="${i} image"
+                    />
+                </div>
+            </a>
+        </li>
+        `
+    }
 }
 
 
 //statename in bottom-part
-
-const bestPlace = document.querySelector("#bottom-part .Best-places ul")
-for (let i of indian_states) {
-    bestPlace.innerHTML += `<li>
-    <a href="#">Best Restaurants in ${i}</a>
-</li>`
-}
-
-const culslnes = document.querySelector("#bottom-part .culslnes ul")
-for (let i of indian_cuisines) {
-    culslnes.innerHTML += `
-    <li>
-        <a href="#">${i} Restaurant Near Me</a>
+if(document.querySelector("#bottom-part .Best-places ul")!=null){
+    const bestPlace = document.querySelector("#bottom-part .Best-places ul")
+    for (let i of indian_states) {
+        bestPlace.innerHTML += `<li>
+        <a href="#">Best Restaurants in ${i}</a>
     </li>`
+    }
 }
 
-const offerul = document.querySelector("#offers .offer-ul")
-for (let i = 1; i < 9; i++) {
-    offerul.innerHTML += `<li>
-    <a href="#">
-        <div>
-            <img
-                src="images/offers${i}.webp"
-                alt="Offer Image"
-            />
-        </div>
-    </a>
-</li>`
+if(document.querySelector("#bottom-part .culslnes ul")!=null){
+    const culslnes = document.querySelector("#bottom-part .culslnes ul")
+    for (let i of indian_cuisines) {
+        culslnes.innerHTML += `
+        <li>
+            <a href="#">${i} Restaurant Near Me</a>
+        </li>`
+    }
 }
 
-
-const indCities = document.querySelector("#other_cities div ul")
-for (let i of indian_cities) {
-    indCities.innerHTML += `<li>
-    <p>${i}</p>
-</li>`
+if(document.querySelector("#offers .offer-ul")!=null){
+    const offerul = document.querySelector("#offers .offer-ul")
+    for (let i = 1; i < 9; i++) {
+        offerul.innerHTML += `<li>
+        <a href="#">
+            <div>
+                <img
+                    src="images/offers${i}.webp"
+                    alt="Offer Image"
+                />
+            </div>
+        </a>
+    </li>`
+    }
 }
 
+if(document.querySelector("#other_cities div ul")!=null){
+    const indCities = document.querySelector("#other_cities div ul")
+    for (let i of indian_cities) {
+        indCities.innerHTML += `<li>
+        <p>${i}</p>
+    </li>`
+    }
+}
 
-const outDelivery = document.querySelector("footer .deliver button")
-const otherCities = document.querySelector("#other_cities")
-outDelivery.addEventListener("click", function () {
-    // document.querySelector("#other_cities").style.display = "none"
-    if (otherCities.style.display == "none") {
-        otherCities.style.display = "block";
-        document.querySelector("footer .deliver button i").style.transform = "rotate(180deg)"
-    } else {
-        otherCities.style.display = "none"
-        document.querySelector("footer .deliver button i").style.transform = "rotate(0deg)"
+if(document.querySelector("#other_cities")!=null){
+    const outDelivery = document.querySelector("footer .deliver button");
+    const otherCities = document.querySelector("#other_cities");
+    outDelivery.addEventListener("click", function () {
+        // document.querySelector("#other_cities").style.display = "none"
+        if (otherCities.style.display == "none") {
+            otherCities.style.display = "block";
+            document.querySelector("footer .deliver button i").style.transform = "rotate(180deg)";
+        } else {
+            otherCities.style.display = "none";
+            document.querySelector("footer .deliver button i").style.transform = "rotate(0deg)";
+        };
+    })
+
+}
+
+likeBtn = document.querySelector("#asd");
+
+var cart = []
+$(document).ready(function(){
+    if(document.querySelector(".like")!=null){
+        $(".like").click(function(){
+            currentItem = $(this).parent().html();
+            var currntColor = $(this).css("color");
+            if(currntColor === "rgb(181, 181, 181)"){
+                $(this).css("color","red");
+                
+                cart.push(`${$(this).parent().html()}`);
+                // console.log(cart.indexOf(currentItem))
+                // $(this).parent().css("backgroundColor","red")
+            }
+            else{
+                let cartCheck = cart.indexOf($(this).parent().html());
+                console.log(cartCheck);
+                
+                cart.splice(cart.indexOf($(this).parent().html()),1);
+                
+                console.log($(this).parent().html());
+                console.log(cartCheck);
+                $(this).css("color","rgb(181, 181, 181)");
+            }
+
+            if(document.querySelector(".wishLists")!=null){
+                for(let i of cart){
+                    document.querySelector(".wishLists ul").innerHTML += i
+                }
+            }
+            console.log(cart);
+        });
+
     }
 })
-
