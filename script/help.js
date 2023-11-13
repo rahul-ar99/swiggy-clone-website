@@ -121,8 +121,8 @@ function helpButton(btn) {
         document.querySelector(".partnerOnboarding").style.display = "block"
         document.querySelector(".legal").style.display = "none"
         document.querySelector(".faqs").style.display = "none"
-        document.querySelector("#legalBtn").style.background= "#eaeaea          "
-        document.querySelector("#faqsBtn").style.background= "#eaeaea"
+        document.querySelector("#legalBtn").style.background= "transparent"
+        document.querySelector("#faqsBtn").style.background= "transparent"
         document.querySelector("#partnerBtn").style.background= "white"
 
 
@@ -132,16 +132,16 @@ function helpButton(btn) {
         document.querySelector(".legal").style.display = "block"
         document.querySelector(".faqs").style.display = "none"
         document.querySelector("#legalBtn").style.background= "white"
-        document.querySelector("#faqsBtn").style.background= "#eaeaea"
-        document.querySelector("#partnerBtn").style.background= "#eaeaea"
+        document.querySelector("#faqsBtn").style.background= "transparent"
+        document.querySelector("#partnerBtn").style.background= "transparent"
     }
     else if (btn == 'faqs') {
         document.querySelector(".partnerOnboarding").style.display = "none"
         document.querySelector(".legal").style.display = "none"
         document.querySelector(".faqs").style.display = "block"
-        document.querySelector("#legalBtn").style.background= "#eaeaea"
+        document.querySelector("#legalBtn").style.background= "transparent"
         document.querySelector("#faqsBtn").style.background= "white"
-        document.querySelector("#partnerBtn").style.background= "#eaeaea"
+        document.querySelector("#partnerBtn").style.background= "transparent"
     }
 }
 

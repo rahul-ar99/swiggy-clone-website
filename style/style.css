@@ -204,8 +204,121 @@ p{
     display: none;
     /* width: 100%; */
 }
-
 #top-section #blank:hover {}
+
+
+
+/* ------------wish list --------------------- */
+
+#wishListContent{
+    position: absolute;
+    top: 60px;
+    width: 100vw;
+    display: none;
+    height: 94vh;
+    background-color: rgb(255, 232, 203);
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+
+
+
+/* ------------ wish list --------------- */
+#wishListContent ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#wishListContent ul li{
+    width: 24%;
+    transition: 0.2s;
+    list-style: none;
+    position: relative;
+}
+
+
+#wishListContent ul li:hover {
+    transform: scale(.93);
+}
+
+
+#wishListContent ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#wishListContent a div {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+#wishListContent .food-details {
+    padding-left: 20px;
+    width: 90%;
+    height: min-content;
+}
+#wishListContent a .food-img {
+    position: relative;
+    width: 100%;
+}
+
+#wishListContent a .food-img img {
+    /* width: 100%; */
+    /* z-index: 123; */
+    /* filter: hue-rotate(90deg); */
+
+}
+#wishListContent .like {
+    font-size: 30px;
+    width: 50px;
+    border-radius: none;
+    position: absolute;
+    bottom:50px;
+    right: -10px;
+    color: rgb(181, 181, 181);
+}
+
+#wishListContent i:hover{
+    cursor: default;
+    /* color: red; */
+}
+
+
+#wishListContent ul li a h6 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#wishListContent ul li a .food-details span {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#wishListContent ul li a .food-details p {
+    color: #848484;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#wishListContent ul li a .food-details img,
+.topShopImgDet img {
+    height: 20px;
+    margin-right: 5px;
+    filter: hue-rotate(330deg);
+
+}
+
+
+#wishListContent .foods .like.active{
+    color:red;
+}
+
+/* ------------end wish list --------------------- */
+
 
 #blank #left-blank {
     width: 62.5vw;
@@ -1164,11 +1277,15 @@ footer ul li a {
     flex-direction: column;
     border-radius: 5px;
     overflow: hidden;
+    /* position: -webkit-sticky; */
+    position: sticky;
+    top: 100px;
+    /* -webkit-stic */
 }
 
 #helpSupport .content .leftHead button{
     border: none;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
     padding: 25px 0 25px 40px;
     background-color: #ffffff;
     font-size: 15px;
@@ -1181,7 +1298,7 @@ footer ul li a {
     font-size: 16px;
 }
 #helpSupport #faqsBtn,#helpSupport #legalBtn{
-    background-color: #eaeaea;
+    background-color: transparent;
 }
 
 #helpSupport .content .rightContent {
@@ -1280,93 +1397,3 @@ footer ul li a {
 
 
 
-
-/* ------------ wish list --------------- */
-
-#main-content .wishLists ul li{
-    width: 24%;
-    transition: 0.2s;
-    list-style: none;
-    position: relative;
-}
-
-#main-content .wishLists{
-    /* background-color: #424242; */
-}
-
-#main-content .wishLists ul li:hover {
-    transform: scale(.93);
-}
-
-
-#main-content .wishLists ul li a {
-    text-decoration: none;
-    color: #000000;
-}
-
-#main-content .wishLists a div {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 14px;
-}
-
-#main-content .wishLists .food-details {
-    padding-left: 20px;
-    width: 90%;
-    height: min-content;
-}
-#main-content .wishLists a .food-img {
-    position: relative;
-}
-
-#main-content .wishLists a .food-img img {
-    width: 100%;
-    /* filter: hue-rotate(90deg); */
-
-}
-#main-content .wishLists .like {
-    font-size: 30px;
-    width: 50px;
-    border-radius: none;
-    position: absolute;
-    bottom:50px;
-    right: -10px;
-    color: rgb(181, 181, 181);
-}
-
-#main-content .wishLists i:hover{
-    cursor: default;
-    /* color: red; */
-}
-
-
-#main-content .wishLists ul li a h6 {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-#main-content .wishLists ul li a .food-details span {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-#main-content .wishLists ul li a .food-details p {
-    color: #848484;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-#main-content .wishLists ul li a .food-details img,
-.topShopImgDet img {
-    height: 20px;
-    margin-right: 5px;
-    filter: hue-rotate(330deg);
-
-}
-
-
-#main-content .foods .like.active{
-    color:red;
-}

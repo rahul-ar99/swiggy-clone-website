@@ -111,7 +111,7 @@ const loginContent = `<div class="left-blank"  id="left-blank" onclick="loginClo
                 placeholder="Password"
                 maxlength = "14"
                 name="password"
-                />
+                required/>
                 <input type="submit" onclick="validate_log_form()" value="LOGIN">
             </form>
             <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
@@ -136,19 +136,19 @@ var signupContent = `<div class="left-blank"  id="left-blank" onclick="loginClos
         placeholder="Phone number"
         oninput="this.value = this.value.replace(/[^0-9]/g, '')"
         maxlength = "10"
-        />
-        <input type="email" placeholder="Email" name="email" />
+        required/>
+        <input type="email" placeholder="Email" name="email" required/>
         
         <input type="password"
         name = "password"
         placeholder="Password"
         maxlength="40"
-         />
+        required/>
         <input type="password"
         name="password2"
         placeholder="Confirm Password"
         maxlength="40"
-         />
+        required/>
         <input type="submit" onclick="validate_sign_form()" value="SIGN UP">
     </form>
         <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
@@ -471,13 +471,18 @@ if(document.querySelector("#other_cities")!=null){
 
 // ------------ wish list -------------------
 
-if ($(".like-icon")) {
-    $(".like-icon").click(function(e){
-        // console.log(e.currentTarget);
-        e.currentTarget.classList.toggle('active')
-        // $(this).toggle("active")
-    })
-}
+// if ($(".like-icon")) {
+//     $(".like-icon").click(function(e){
+//         // console.log(e.currentTarget);
+//         e.currentTarget.classList.toggle('active')
+//         console.log(e.parent)
+//         likeContent = e.currentTarget
+//         console.log(likeContent)
+//         document.querySelector("#wishListContent").innerHTML += likeContent
+//     })
+// }
+$("#WishListContent").html+="asdfsdf"
+document.querySelector("#wishListContent").innerHTML += "sdfsdfsd"
 
 
 
@@ -491,20 +496,21 @@ if ($(".like-icon")) {
 //             var currntColor = $(this).css("color");
 //             if(currntColor === "rgb(181, 181, 181)"){
 //                 $(this).css("color","red");
-                
-//                 cart.push(`${$(this).parent().html()}`);
+//                 // $(this).parent().html()
+//                 document.querySelector("#wishListContent ul").innerHTML += `<li>${$(this).parent().html()}</li>`
+//                 // $(this).parent().html()
+//                 // cart.push(`${$(this).parent().html()}`);
 //                 // console.log(cart.indexOf(currentItem));
 //                 // $(this).parent().css("backgroundColor","red");
-//                 localStorage.setItem(cartItem,currentItem);
-//                 cartItem ++;
+//                 // localStorage.setItem(cartItem,currentItem);
+//                 // cartItem ++;
+//                 console.log($(this).parent().html())
 //             }
 //             else{
-//                 localStorage.removeItem(0)
-//                 let cartCheck = cart.indexOf($(this).parent().html());
-//                 console.log(cartCheck);
-//                 cart.splice(cart.indexOf($(this).parent().html()),1);
-//                 console.log($(this).parent().html());
-//                 console.log(cartCheck);
+//                 // console.log(cartCheck);
+//                 // cart.splice(cart.indexOf($(this).parent().html()),1);
+//                 // console.log($(this).parent().html());
+//                 // console.log(cartCheck);
 //                 $(this).css("color","rgb(181, 181, 181)");
 //             }
 //             if(document.querySelector(".wishLists")!=null){
@@ -514,23 +520,8 @@ if ($(".like-icon")) {
 //             }
 //             console.log(cart);
 //         });
-
 //     }
 // })
-
-// if(document.querySelector(".wishLists")!=null){
-//     for(let i=0;i<20;i++){
-//         if(localStorage.getItem(i)!=null){
-//             let wishitems = localStorage.getItem(i)
-//             document.querySelector(".wishLists ul").innerHTML += `<li>${wishitems} </li>` 
-//         }
-//     }
-// }
-
-user_database = [
-    
-]
-
 
 // sign in function 
 function validate_sign_form() {
@@ -617,7 +608,7 @@ function authentication(number,password){
                 return true
                 break;
             }else{
-                document.querySelector("#userMsg").innerText = "password is not correct"
+                document.querySelector("#u`serMsg").innerText = "password is not correct"
             }
         }else{
             document.querySelector("#userMsg").innerText = "number is not registered"
@@ -626,4 +617,8 @@ function authentication(number,password){
     return false
 }
 
-$('')
+$('#wishListId').click(function(){
+    $("#wishListContent").toggle("fgdfgadestgertg");
+})
+
+
