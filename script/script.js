@@ -97,22 +97,22 @@ const loginContent = `<div class="left-blank"  id="left-blank" onclick="loginClo
             <img src="images/login.webp" alt="flower image">
         </div>
         <div class="inpField logInC">
-            <form>
-            <input    type="text"
-            inputmode="numeric"
-            placeholder="Phone number"
-            oninput="this.value = this.value.replace(/[^0-9 +]/g, '')"
-            minlength = "10"
-            maxlength = "14"
-            name="username"
-            required/>
-            <input    type="password"
-            placeholder="Password"
-            minlength = "10"
-            maxlength = "14"
-            name="password"
-            required/>
-            <input type="submit" onclick="return userlogin()" value="LOGIN">
+            <p id="userMsg"></p>
+            <form method="post">
+                <input    type="text"
+                inputmode="numeric"
+                placeholder="Phone number"
+                oninput="this.value = this.value.replace(/[^0-9 +]/g, '')"
+                minlength = "10"
+                maxlength = "14"
+                name="number"
+                required/>
+                <input    type="password"
+                placeholder="Password"
+                maxlength = "14"
+                name="password"
+                />
+                <input type="submit" onclick="validate_log_form()" value="LOGIN">
             </form>
             <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
         </div>
@@ -128,24 +128,28 @@ var signupContent = `<div class="left-blank"  id="left-blank" onclick="loginClos
         <img src="images/login.webp" alt="flower image">
     </div>
     <div class="inpField signInC" id="inpField">
-    <form>
+    <form method="post">
+        <p id="userMsg"></p>
         <input type="text"
         inputmode="numeric"
+        name="number"
         placeholder="Phone number"
         oninput="this.value = this.value.replace(/[^0-9]/g, '')"
         maxlength = "10"
-        required/>
-        <input type="text"
-        placeholder="Username"
-        maxlength="40"
-        oninput="this.value = this.value.replace(/[^a-zA-Z .]/g, '')"
-        required />
-        <input type="email" placeholder="Email" required/>
+        />
+        <input type="email" placeholder="Email" name="email" />
+        
         <input type="password"
+        name = "password"
         placeholder="Password"
         maxlength="40"
-        required />
-        <input type="submit" value="SIGN UP">
+         />
+        <input type="password"
+        name="password2"
+        placeholder="Confirm Password"
+        maxlength="40"
+         />
+        <input type="submit" onclick="validate_sign_form()" value="SIGN UP">
     </form>
         <P>By clicking on Login, I Accept the Terms & conditions & Privacy Policy</P>
     </div>
@@ -378,7 +382,7 @@ if(document.querySelector("#main-content .foods ul") != null){
     const mainFoods = document.querySelector("#main-content .foods ul")
     for (let i = 1; i <= 20; i++) {
         mainFoods.innerHTML += `<li>
-        <a href=""><div class="food-img"><img src="images/food${i}.webp" alt="Pastry" /></div><div class="food-details"><h6>${foodHeads[i]}</h6><span class="rating"><img src="images/icons/star-inside-circle(1).png" alt="star icon"/>4.3</span><p>North Indian, Indian Burrabazar</p><p>Kolkata</p></div></a><i class="fa fa-heart like" id="asd"></i></li>`
+        <a href=""><div class="food-img"><img src="images/food${i}.webp" alt="Pastry" /></div><div class="food-details"><h6>${foodHeads[i]}</h6><span class="rating"><img src="images/icons/star-inside-circle(1).png" alt="star icon"/>4.3</span><p>North Indian, Indian Burrabazar</p><p>Kolkata</p></div></a><i class="fa fa-heart like like-icon" id="like-icon"></i></li>`
 }
 }
 
@@ -467,97 +471,159 @@ if(document.querySelector("#other_cities")!=null){
 
 // ------------ wish list -------------------
 
-likeBtn = document.querySelector("#asd");
-cartItem = 0
-var cart = []
-$(document).ready(function(){
-    if(document.querySelector(".like")!=null){
-        $(".like").click(function(){
-            currentItem = $(this).parent().html();
-            var currntColor = $(this).css("color");
-            if(currntColor === "rgb(181, 181, 181)"){
-                $(this).css("color","red");
-                
-                cart.push(`${$(this).parent().html()}`);
-                // console.log(cart.indexOf(currentItem));
-                // $(this).parent().css("backgroundColor","red");
-                localStorage.setItem(cartItem,currentItem);
-                cartItem ++;
-            }
-            else{
-                localStorage.removeItem(0)
-                let cartCheck = cart.indexOf($(this).parent().html());
-                console.log(cartCheck);
-                cart.splice(cart.indexOf($(this).parent().html()),1);
-                console.log($(this).parent().html());
-                console.log(cartCheck);
-                $(this).css("color","rgb(181, 181, 181)");
-            }
-            if(document.querySelector(".wishLists")!=null){
-                for(let i of cart){
-                    document.querySelector(".wishLists ul").innerHTML += i
-                }
-            }
-            console.log(cart);
-        });
-
-    }
-})
-
-if(document.querySelector(".wishLists")!=null){
-    for(let i=0;i<20;i++){
-        if(localStorage.getItem(i)!=null){
-            let wishitems = localStorage.getItem(i)
-            document.querySelector(".wishLists ul").innerHTML += `<li>${wishitems} </li>` 
-        }
-    }
+if ($(".like-icon")) {
+    $(".like-icon").click(function(e){
+        // console.log(e.currentTarget);
+        e.currentTarget.classList.toggle('active')
+        // $(this).toggle("active")
+    })
 }
 
 
 
+// likeBtn = document.querySelector("#asd");
+// cartItem = 0
+// var cart = []
+// $(document).ready(function(){
+//     if(document.querySelector(".like")!=null){
+//         $(".like").click(function(){
+//             currentItem = $(this).parent().html();
+//             var currntColor = $(this).css("color");
+//             if(currntColor === "rgb(181, 181, 181)"){
+//                 $(this).css("color","red");
+                
+//                 cart.push(`${$(this).parent().html()}`);
+//                 // console.log(cart.indexOf(currentItem));
+//                 // $(this).parent().css("backgroundColor","red");
+//                 localStorage.setItem(cartItem,currentItem);
+//                 cartItem ++;
+//             }
+//             else{
+//                 localStorage.removeItem(0)
+//                 let cartCheck = cart.indexOf($(this).parent().html());
+//                 console.log(cartCheck);
+//                 cart.splice(cart.indexOf($(this).parent().html()),1);
+//                 console.log($(this).parent().html());
+//                 console.log(cartCheck);
+//                 $(this).css("color","rgb(181, 181, 181)");
+//             }
+//             if(document.querySelector(".wishLists")!=null){
+//                 for(let i of cart){
+//                     document.querySelector(".wishLists ul").innerHTML += i
+//                 }
+//             }
+//             console.log(cart);
+//         });
 
+//     }
+// })
 
-// user signin function
-
-// if(document.querySelector(".logInC form")!=null){
-    // let form = document.querySelector(".logInC form");
-    // form.addEventListener("submit",(e)=>{
-    //     console.log("sdfds")
-    //     const username = form.username.value;
-    //     const password = form.password.value;
-    //     const authenticated = authentication(username,password)
-
-    // })
-
-    // if(authenticated){
-    //     alert("correct")
-
-    // }
-    // else(
-    //     alert("not correct")
-    // )
-
+// if(document.querySelector(".wishLists")!=null){
+//     for(let i=0;i<20;i++){
+//         if(localStorage.getItem(i)!=null){
+//             let wishitems = localStorage.getItem(i)
+//             document.querySelector(".wishLists ul").innerHTML += `<li>${wishitems} </li>` 
+//         }
+//     }
 // }
 
-function userlogin(){
-    const username = form.username.value;
-    const password = form.password.value;
-    const authenticated = authentication(username,password)
+user_database = [
+    
+]
 
-    if(authenticated){
-        alert("correct")
 
-    }
-    else(
-        alert("not correct")
-    )
+// sign in function 
+function validate_sign_form() {
+
+    // assign value from sign in form
+    let sign_form = document.querySelector(".signInC form")
+
+    // onclick event on submit
+    sign_form.addEventListener("submit",(e)=>{
+
+        // error in automatic site refresh
+        e.preventDefault();
+
+        // assign value from user input
+        const sNumber = sign_form.number.value;
+        const sEmail = sign_form.email.value;
+        const sPassword = sign_form.password.value;
+        const spassword2 = sign_form.password2.value;
+
+        // checking password is same
+        if(sPassword==spassword2){
+            // checking user input data is already in database
+            alreadyUser = true
+            for(let i=0;i<localStorage.length;i++){
+                console.log(sNumber,JSON.parse(localStorage.getItem(i)).number)
+                if(sNumber==JSON.parse(localStorage.getItem(i)).number){
+                    console.log("same")
+                    alreadyUser = false
+                    break
+                }
+            }
+            // add value to database
+            if(alreadyUser==true){
+                userObj = {
+                    email:sEmail,
+                    number:sNumber,
+                    password:sPassword
+                }
+                localStorage.setItem((localStorage.length),JSON.stringify(userObj))
+                // user_database.push(userObj)
+                location.reload();
+            }else{
+                document.querySelector("#userMsg").innerText = "phone number is already exist";
+            }
+        }else{
+            document.querySelector("#userMsg").innerText = "password is not same";
+            document.querySelector("signInC form").reload()
+        } 
+        
+    })
 }
 
-function authentication(username,password){
-    if(username=="7559824321" && password== "password11"){
-        return true
-    }
-    else{
-        return false
-    }
+
+
+// --------------- login function -----------------
+
+function validate_log_form() {
+    // assign value to  login form
+    let log_form = document.querySelector(".logInC form");
+    
+    // onclick event on submit
+    log_form.addEventListener("submit", (e) => {
+        // error in automatic site refresh
+        e.preventDefault();
+
+        // assign values from user input
+        const usernumber = log_form.number.value;
+        const password = log_form.password.value;
+
+       // check username and password
+        const authenticated = authentication(usernumber, password);
+
+        // if authenticated is true return corrct otherwise not correct
+        (authenticated==true) ? prompt("correct"): alert("not correct");
+    });  
 }
+
+
+function authentication(number,password){
+    lenStorage = localStorage.length;
+    for(let i=0;i<lenStorage;i++){
+        if(number==JSON.parse(localStorage.getItem(i)).number){
+            if(password == JSON.parse(localStorage.getItem(i)).password){
+                return true
+                break;
+            }else{
+                document.querySelector("#userMsg").innerText = "password is not correct"
+            }
+        }else{
+            document.querySelector("#userMsg").innerText = "number is not registered"
+        }
+    }
+    return false
+}
+
+$('')
