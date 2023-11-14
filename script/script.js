@@ -471,20 +471,25 @@ if(document.querySelector("#other_cities")!=null){
 
 // ------------ wish list -------------------
 
-// if ($(".like-icon")) {
-//     $(".like-icon").click(function(e){
-//         // console.log(e.currentTarget);
-//         e.currentTarget.classList.toggle('active')
-//         console.log(e.parent)
-//         likeContent = e.currentTarget
-//         console.log(likeContent)
-//         document.querySelector("#wishListContent").innerHTML += likeContent
-//     })
-// }
-$("#WishListContent").html+="asdfsdf"
-document.querySelector("#wishListContent").innerHTML += "sdfsdfsd"
+if ($(".like-icon")) {
+    $(".like-icon").click(function(e){
+        e.currentTarget.classList.toggle('active')
+        wishlist()
+    })
+}
+function wishlist(){
+    $("#wishListContent ul").html("")
+    wishCart = ""
+    // document.querySelector("#wishListContent").innerHTML += ""
+    for(let i=0;i<$(".like-icon.active").length;i++){
+        wishCart += `${$(".like-icon.active").parent()[i].outerHTML}`
 
-
+        console.log($(".like-icon.active").parent())
+    }
+    console.log(wishCart)
+    // document.querySelector("#wishListContent UL").innerHTML = 
+    $("#wishListContent ul").html(wishCart)
+}
 
 // likeBtn = document.querySelector("#asd");
 // cartItem = 0

@@ -222,7 +222,9 @@ p{
 }
 
 
-
+.like-icon.active{
+    color: red;
+}
 
 /* ------------ wish list --------------- */
 #wishListContent ul{
@@ -312,14 +314,11 @@ p{
 
 }
 
-
-#wishListContent .foods .like.active{
+.foods .like-icon.active{
     color:red;
 }
 
 /* ------------end wish list --------------------- */
-
-
 #blank #left-blank {
     width: 62.5vw;
     height: 100vh;
@@ -339,7 +338,6 @@ p{
     height: 100vh;
     background-color: #ffffff;
     /* float: right; */
-
 }
 
 #blank .content {
@@ -850,7 +848,7 @@ hr {
     /* filter: hue-rotate(90deg); */
 
 }
-#main-content .foods .like {
+.foods .like {
     font-size: 30px;
     width: 50px;
     border-radius: none;
